@@ -1,0 +1,23 @@
+body {
+  text-rendering: optimizeLegibility;
+  background-color: black;
+  color: #797979;
+  font: normal normal normal 16pt "Helvetica", Arial, sans-serif;
+}
+
+#card {
+  font-size: 2em;
+  font-weight: bold;
+  width: 12em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1em;
+  
+  .orange    { color: #F2512E }
+  .lightblue { color: #B4E9EF }
+  .yellow    { color: #F2A537 }
+  .blue      { color: #0CBEBE }
+  .green     { color: #9FBC3C }
+  .white     { color: #FFFFFF }
+}
+  
