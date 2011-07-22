@@ -17,10 +17,8 @@ group :development, :test do
   gem 'guard-test'
   gem 'ruby-prof'
   
-  gem 'powder'
-  
-  require 'rbconfig'
-  if RbConfig::CONFIG['host_os'] =~ /darwin/i
+  group :darwin do
+    gem 'powder'
     gem 'rb-fsevent'
     gem 'growl'
   end
