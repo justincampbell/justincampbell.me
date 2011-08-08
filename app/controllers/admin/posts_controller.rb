@@ -13,7 +13,7 @@ class Admin::PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
-    @post = Post.find(params[:id])
+    @post = Post.find_by_slug(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -34,7 +34,7 @@ class Admin::PostsController < ApplicationController
 
   # GET /posts/1/edit
   def edit
-    @post = Post.find(params[:id])
+    @post = Post.find_by_slug(params[:id])
   end
 
   # POST /posts
@@ -56,7 +56,7 @@ class Admin::PostsController < ApplicationController
   # PUT /posts/1
   # PUT /posts/1.json
   def update
-    @post = Post.find(params[:id])
+    @post = Post.find_by_slug(params[:id])
 
     respond_to do |format|
       if @post.update_attributes(params[:post])
@@ -72,7 +72,7 @@ class Admin::PostsController < ApplicationController
   # DELETE /posts/1
   # DELETE /posts/1.json
   def destroy
-    @post = Post.find(params[:id])
+    @post = Post.find_by_slug(params[:id])
     @post.destroy
 
     respond_to do |format|

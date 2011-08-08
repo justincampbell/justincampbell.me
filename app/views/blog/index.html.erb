@@ -1,0 +1,8 @@
+<ul>
+  <% @posts.each do |post| %>
+    <li>
+      <%= link_to post.title, "/blog/#{post.slug}" %>
+      <%= time_ago_in_words(post.published_at) %> ago
+    </li>
+  <% end %>
+</ul>
