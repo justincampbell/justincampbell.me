@@ -1,5 +1,5 @@
 <div class="post">
-  <h3><%= link_to @post.title, "/blog/#{@post.slug}" %></h3>
+  <h3><%= link_to @post.title, @post.permalink %></h3>
   <span class="date"><%= time_ago_in_words(@post.published_at) %> ago</span>
   <%= markdown @post.body %>
 </div>

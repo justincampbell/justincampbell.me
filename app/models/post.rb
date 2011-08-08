@@ -3,6 +3,10 @@ class Post < ActiveRecord::Base
   
   validates_uniqueness_of :title, :slug
   
+  def permalink
+    "/blog/#{self.to_param}"
+  end
+  
   def to_param
     slug or title.parameterize
   end
