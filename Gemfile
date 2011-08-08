@@ -11,6 +11,11 @@ gem 'rdiscount'
 
 gem 'heroku'
 
+group :production do
+  gem 'pg'
+  gem 'therubyracer-heroku'
+end
+
 group :development, :test do
   gem 'sqlite3'
   
