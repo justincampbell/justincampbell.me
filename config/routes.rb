@@ -1,4 +1,6 @@
 Justincampbell::Application.routes.draw do
+  root :to => 'pages#index'
+  
   get 'blog'       => 'blog#index'
   get 'blog/:slug' => 'blog#show'
   
