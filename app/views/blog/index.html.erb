@@ -3,6 +3,7 @@
     <li>
       <%= link_to post.title, "/blog/#{post.slug}" %>
       <%= time_ago_in_words(post.published_at) %> ago
+      <%= markdown post.body, :preview => true %>
     </li>
   <% end %>
 </ul>
