@@ -7,8 +7,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+  <div id="wrapper">
+    <h1><a href="http://justincampbell.me">JustinCampbell<span class="gray">.me</span></a></h1>
+    <p id="description">
+    I work with some awesome people making things at <%= link_to "Movitas", "http://movitas.com" %>.<br />
+    In my free time I'm a Web Developer and gamer.<br />
+    Sometimes I take pictures of food or go snowboarding.<br />
+    You should follow me on Twitter: <a href="http://twitter.com/JustinCampbell">@JustinCampbell</a>
+    </p>
+    <%= yield %>
+  </div>
 </body>
 </html>

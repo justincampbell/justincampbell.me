@@ -1,9 +1,8 @@
-<ul>
-  <% @posts.each do |post| %>
-    <li>
-      <%= link_to post.title, "/blog/#{post.slug}" %>
-      <%= time_ago_in_words(post.published_at) %> ago
-      <%= markdown post.body, :preview => true %>
-    </li>
-  <% end %>
-</ul>
+<% @posts.each do |post| %>
+  <div class="post">
+    <h3><%= link_to post.title, "/blog/#{post.slug}" %></h3>
+    <span class="date"><%= time_ago_in_words(post.published_at) %> ago</span>
+    <%= markdown post.body, :preview => true %>
+    <span class="read_more_container"><%= link_to "Read More", "/blog/#{post.slug}", :class => "read_more" %></span>
+  </div>
+<% end %>
