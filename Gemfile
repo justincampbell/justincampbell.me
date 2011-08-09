@@ -10,6 +10,7 @@ gem 'jquery-rails'
 gem 'rdiscount'
 
 gem 'heroku'
+gem 'newrelic_rpm'
 
 group :production do
   gem 'pg'
