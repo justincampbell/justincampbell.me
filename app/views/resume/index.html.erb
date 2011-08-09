@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <style type="text/css">
+      
+      body {
+        text-rendering: optimizeLegibility;
+        background: white;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        color: #333;
+      }
+      
+      h1 {
+        font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+        letter-spacing: -0.05em;
+        font-size: 5em;
+        margin: 0px;
+        color: #444
+      }
+      
+      h2, h3 {
+        font-family: Helvetica, Arial, sans-serif;
+        font-weight: normal;
+      }
+      
+      h2 { text-indent: .25em; }
+      h3 { text-indent: .5em; }
+      
+      blockquote {
+        color: #666;
+        border-left: 5px solid #CCC;
+        padding-left: 10px;
+      }
+      
+      #wrapper {
+        width: 960px;
+        margin: auto;
+      }
+    
+    </style>
+    <title>Justin Campbell</title>
+  </head>
+  <body>
+    <div id="wrapper">
+      <%= markdown @md, :add_header_levels => false %>
+    </div>
+  </body>
+</html>
