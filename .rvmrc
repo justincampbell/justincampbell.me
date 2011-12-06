@@ -1,2 +1,2 @@
-rvm 1.9.2@justincampbell
+rvm 1.9.3@justincampbell --install --create
 rvm_project_rvmrc_default=1
