@@ -3,5 +3,48 @@
  * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
  * the top of the compiled file, but it's generally better to create a new file per style scope.
  *= require_self
- *= require_tree . 
+ *= require_tree .
 */
+
+
+
+body {
+  font: normal normal normal 14pt Helvetica, Arial, sans-serif;
+  text-rendering: optimizeLegibility;
+  background-color: white;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+#header_wrapper {
+  background-color: black;
+  width: 100%;
+  text-align: center;
+}
+
+#header {
+  border: 1px solid #999;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  width: 760px;
+}
+
+#bio {
+  color: white;
+  font: normal normal bold 1.5em Helvetica, Arial, sans-serif;
+  padding: 20px;
+  width: 340px;
+  clear:none;
+}
+
+#availability_form {
+  float: left;
+  background-color: yellow;
+  clear: right;
+}
