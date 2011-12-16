@@ -7,7 +7,7 @@ class ResumeController < ApplicationController
     respond_to do |format|
       format.html
       # format.md # Serve markdown directly from /public
-      format.text { send_data plaintext(:markdown => @md), :type => 'text/text' }
+      format.text { send_data plaintext(:markdown => @md), :type => "text/text", :disposition => "inline" }
     end
   end
 
