@@ -35,13 +35,25 @@
         width: 960px;
         margin: auto;
       }
-    
+
+      #formats {
+        text-align: right;
+        float: right;
+      }
+
     </style>
     <%= render "analytics/google" %>
     <title>Justin Campbell</title>
   </head>
   <body>
     <div id="wrapper">
+      <div id="formats">
+        Also available in
+        <%= link_to "Plaintext", "/resume/JustinCampbell.txt" %>,
+        <%= link_to "Markdown", "/resume/JustinCampbell.md" %>,
+        or as a
+        <%= link_to "PDF", "/resume/JustinCampbell.pdf" %>
+      </div>
       <%= markdown @md, :add_header_levels => false %>
     </div>
   </body>
