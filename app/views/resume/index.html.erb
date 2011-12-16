@@ -1,14 +1,14 @@
 <html>
   <head>
     <style type="text/css">
-      
+
       body {
         text-rendering: optimizeLegibility;
         background: white;
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         color: #333;
       }
-      
+
       h1 {
         font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
         letter-spacing: -0.05em;
@@ -16,21 +16,21 @@
         margin: 0px;
         color: #444
       }
-      
+
       h2, h3 {
         font-family: Helvetica, Arial, sans-serif;
         font-weight: normal;
       }
-      
+
       h2 { text-indent: .25em; }
       h3 { text-indent: .5em; }
-      
+
       blockquote {
         color: #666;
         border-left: 5px solid #CCC;
         padding-left: 10px;
       }
-      
+
       #wrapper {
         width: 960px;
         margin: auto;
@@ -49,7 +49,7 @@
     <div id="wrapper">
       <div id="formats">
         Also available in
-        <%= link_to "Plaintext", "/resume/JustinCampbell.txt" %>,
+        <%= link_to "Plaintext", resume_path(:format => :text) %>,
         <%= link_to "Markdown", "/resume/JustinCampbell.md" %>,
         or as a
         <%= link_to "PDF", "/resume/JustinCampbell.pdf" %>
