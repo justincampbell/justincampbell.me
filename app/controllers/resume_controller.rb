@@ -24,6 +24,7 @@ class ResumeController < ApplicationController
       [/--/, '-'], # Replace em dash with dash
       [/- \[(.*)\]\((.*)\)/, '- \1:'], # Replace links in a list with just the text and a semicolon
       [/\[(.*)\]\((.*)\)/, '\2'], # Replace other links with just the url
+      [/\*\*(.*)\*\*/, '\1'], # Remove bold text
       [/mailto\:/, ''], # Remove mailto: uris
       [/http\:\/\//, ''], # Remove http: uris
       [/\n{2,}/, "\n\n"], # Remove any double-blank spaces
