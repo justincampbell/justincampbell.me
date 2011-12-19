@@ -20,7 +20,7 @@ class ResumeController < ApplicationController
       [/^\#{1,2} +(.*)$/, "#{'\1'}\n"], # Replace heading levels 1 and 2 with just the text and a space on the next line
       [/^### +(.*)$/, "#{'\1'}"], # Replace heading level 3 with just the text
       [/^> +(.*)$/, '\1'], # Remove > block prefixes
-      [/^(.*)\* *(.*)$/, '\1- \2'], # Replace bullets with dashes
+      [/^(\s*)\* *(.*)$/, '\1- \2'], # Replace bullets with dashes
       [/--/, '-'], # Replace em dash with dash
       [/- \[(.*)\]\((.*)\)/, '- \1:'], # Replace links in a list with just the text and a semicolon
       [/\[(.*)\]\((.*)\)/, '\2'], # Replace other links with just the url
