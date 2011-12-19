@@ -36,6 +36,8 @@ class ResumeController < ApplicationController
     end
 
     text << "\n" unless text.last == "\n" # Ensure a newline exists at the end of the file
+
+    text
   end
 
 end
