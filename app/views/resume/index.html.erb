@@ -52,7 +52,12 @@
         <%= link_to "Plaintext", resume_path(:format => :txt) %>,
         <%= link_to "Markdown", "/resume/JustinCampbell.md" %>,
         or as a
-        <%= link_to "PDF", "/resume/JustinCampbell.pdf" %>
+        <%= link_to "PDF", "/resume/JustinCampbell.pdf" %>.
+        </br>
+        View source for
+        <%= link_to "website", "http://github.com/JustinCampbell/justincampbell" %>
+        and
+        <%= link_to "resume", "http://github.com/JustinCampbell/resume" %>.
       </div>
       <%= markdown @md, :add_header_levels => false %>
     </div>
