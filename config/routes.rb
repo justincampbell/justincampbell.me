@@ -1,4 +1,6 @@
 Justincampbell::Application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+
   root :to => 'pages#index'
 
   get 'blog'       => 'blog#index'
@@ -8,9 +10,4 @@ Justincampbell::Application.routes.draw do
   get 'post/:tumblr_id/:slug' => 'blog#show'
 
   get 'resume' => 'resume#index'
-
-  namespace :admin do
-    root :to => 'admin#index'
-    resources :posts
-  end
 end
