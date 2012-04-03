@@ -1,17 +1,16 @@
-source 'http://rubygems.org'
+source :rubygems
 
-gem 'rails', '~> 3.1'
+gem 'rails', '~> 3.2'
+
+gem 'airbrake'
+gem 'heroku'
 gem 'jquery-rails'
-
+gem 'newrelic_rpm'
 gem 'rdiscount'
 
-gem 'heroku'
-gem 'airbrake'
-gem 'newrelic_rpm'
-
 group :assets do
-  gem 'sass-rails'
   gem 'coffee-rails'
+  gem 'sass-rails'
   gem 'uglifier'
 end
 
@@ -22,15 +21,13 @@ group :production do
 end
 
 group :development, :test do
-  gem 'sqlite3'
-
+  gem 'airbrake-api'
   gem 'foreman'
-
   gem 'guard'
   gem 'guard-test'
-  
+  gem 'httparty'
   gem 'shoulda'
-
+  gem 'sqlite3'
   gem 'wirble'
 
   group :darwin do
@@ -38,10 +35,5 @@ group :development, :test do
     gem 'rb-fsevent'
     gem 'growl'
   end
-
-  gem 'ghi'
-
-  gem 'airbrake-api'
-  gem 'httparty'
 end
 
