@@ -1,11 +1,9 @@
 class ResumeController < ApplicationController
-  layout nil
-
   def index
     @md = File.read("public/resume/JustinCampbell.md")
 
     respond_to do |format|
-      format.html
+      format.html     { render :index, :layout => nil }
       format.markdown { render :text => @md }
       format.text     { render :text => plaintext(:markdown => @md) }
     end
