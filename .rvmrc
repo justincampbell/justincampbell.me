@@ -3,5 +3,5 @@ if [ -x $CC ]; then
   export CC
 fi
 
-rvm 1.9.3@justincampbell --install --create
+rvm 1.9.3@justincampbell.me --install --create
 rvm_project_rvmrc_default=1
