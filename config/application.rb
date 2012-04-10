@@ -38,5 +38,8 @@ module Justincampbell
 
     # Enable the asset pipeline
     config.assets.enabled = true
+
+    # Fix for Heroku + NewRelic and asset compilation
+    config.assets.initialize_on_precompile = false
   end
 end
