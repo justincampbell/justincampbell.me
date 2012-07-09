@@ -1,12 +1,15 @@
 source :rubygems
 
-gem 'rails', '~> 3.2'
+gem 'rails'
 
 gem 'airbrake'
 gem 'heroku'
 gem 'jquery-rails'
 gem 'newrelic_rpm'
+gem 'rake'
 gem 'rdiscount'
+gem 'slim-rails'
+gem 'thin'
 
 group :assets do
   gem 'coffee-rails'
@@ -16,24 +19,28 @@ end
 
 group :production do
   gem 'dalli'
-  gem 'hirefireapp'
   gem 'pg'
 end
 
 group :development, :test do
-  gem 'airbrake-api'
-  gem 'foreman'
-  gem 'guard'
-  gem 'guard-test'
-  gem 'httparty'
-  gem 'shoulda'
+  gem 'rspec-rails'
   gem 'sqlite3'
-  gem 'wirble'
 
-  group :darwin do
-    gem 'powder'
-    gem 'rb-fsevent'
-    gem 'growl'
+  group :guard do
+    gem 'guard-rspec'
+
+    group :darwin do
+      gem 'rb-fsevent'
+      gem 'growl'
+    end
   end
+end
+
+group :test do
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'fivemat'
+  gem 'simplecov'
+  gem 'turnip'
 end
 

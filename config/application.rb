@@ -41,5 +41,12 @@ module Justincampbell
 
     # Fix for Heroku + NewRelic and asset compilation
     config.assets.initialize_on_precompile = false
+
+    config.generators do |generate|
+      generate.helper = false
+      generate.javascripts = false
+      generate.stylesheets = false
+      generate.view_specs = false
+    end
   end
 end
