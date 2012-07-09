@@ -4,6 +4,7 @@ gem 'rails', '~> 3.2'
 
 gem 'airbrake'
 gem 'heroku'
+gem 'faraday'
 gem 'jquery-rails'
 gem 'newrelic_rpm'
 gem 'rdiscount'
