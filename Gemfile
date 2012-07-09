@@ -7,6 +7,7 @@ gem 'heroku'
 gem 'faraday'
 gem 'jquery-rails'
 gem 'newrelic_rpm'
+gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 gem 'rdiscount'
 
 group :assets do
