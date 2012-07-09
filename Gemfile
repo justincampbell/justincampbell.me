@@ -4,6 +4,7 @@ gem 'rails'
 
 gem 'airbrake'
 gem 'heroku'
+gem 'faraday'
 gem 'jquery-rails'
 gem 'newrelic_rpm'
 gem 'rake'
