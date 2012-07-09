@@ -5,3 +5,4 @@ rvm:
 matrix:
   allow_failures:
     - rvm: ruby-head
+script: 'rake db:setup && rake'
