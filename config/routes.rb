@@ -1,7 +1,6 @@
 Justincampbell::Application.routes.draw do
-  root :to => 'pages#index'
+  root :to => 'projects#index'
 
-  get 'blog'       => 'blog#index'
   get 'blog/:slug' => 'blog#show'
 
   # Handle legacy Tumblr URLs

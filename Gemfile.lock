@@ -59,6 +59,7 @@ GEM
     excon (0.14.3)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    fabrication (2.0.2)
     faraday (0.8.1)
       multipart-post (~> 1.1)
     ffi (1.0.11)
@@ -209,6 +210,7 @@ DEPENDENCIES
   coffee-rails
   dalli
   database_cleaner
+  fabrication
   faraday
   fivemat
   growl
