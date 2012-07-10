@@ -1,1 +1,1 @@
-# justincampbell.me [![Build Status](https://secure.travis-ci.org/JustinCampbell/justincampbell.me.png)](https://secure.travis-ci.org/JustinCampbell/justincampbell.me)
+# justincampbell.me [![Build Status](https://secure.travis-ci.org/JustinCampbell/justincampbell.me.png)](https://secure.travis-ci.org/JustinCampbell/justincampbell.me) [![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/JustinCampbell/justincampbell.me)
