@@ -11,6 +11,7 @@ gem 'rake'
 gem 'rdiscount'
 gem 'slim-rails'
 gem 'thin'
+gem 'typus'
 
 group :assets do
   gem 'coffee-rails'
@@ -46,3 +47,6 @@ group :test do
   gem 'turnip'
 end
 
+
+
+gem "devise"
