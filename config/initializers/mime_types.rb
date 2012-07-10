@@ -1,1 +1,1 @@
-Mime::Type.register "text/markdown", :markdown, [], ["md", "mdown"]
+Mime::Type.register "text/plain", :markdown, [], [:md, :mdown]
