@@ -10,6 +10,9 @@ $link-color: $dark-gray
 $link-hover-color: $orange
 $text-color: $dark-gray
 
+@mixin shadow-border($size)
+  @include box-shadow(0px 0px 0px $size black)
+
 body
   color: $text-color
   font: 16pt $helvetica
@@ -37,3 +40,20 @@ a
 
 #content
   float: left
+
+#projects
+  .project
+    +shadow-border(1px)
+    display: inline-block
+    float: both
+    height: 200px
+    margin: 1em
+    text-align: center
+    width: 300px
+    img
+      width: 100%
+    .name
+      height: 100%
+      font: 2em futura
+      width: 100%
+
