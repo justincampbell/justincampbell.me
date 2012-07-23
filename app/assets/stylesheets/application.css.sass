@@ -1,0 +1,39 @@
+@import bourbon
+@import normalize
+
+@import url(http://fonts.googleapis.com/css?family=Pacifico)
+
+$dark-gray: #333
+$orange: orange
+
+$link-color: $dark-gray
+$link-hover-color: $orange
+$text-color: $dark-gray
+
+body
+  color: $text-color
+  font: 16pt $helvetica
+
+a
+  color: $link-color
+  text-decoration: none
+  &:hover
+    color: $link-hover-color
+
+#sidebar
+  position: absolute
+  right: 0
+  text-align: right
+
+#logo
+  color: $orange
+  font: 72pt Pacifico
+
+#navigation
+  font-size: 0.75em
+  list-style-type: none
+  li
+    margin: 0.5em 1em
+
+#content
+  float: left

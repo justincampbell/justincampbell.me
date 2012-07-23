@@ -14,6 +14,7 @@ gem 'thin'
 gem 'typus'
 
 group :assets do
+  gem 'bourbon'
   gem 'coffee-rails'
   gem 'sass-rails'
   gem 'uglifier'
@@ -47,6 +48,3 @@ group :test do
   gem 'turnip'
 end
 
-
-
-gem "devise"

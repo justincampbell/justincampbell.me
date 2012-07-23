@@ -8,16 +8,17 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div id="wrapper">
-    <h1><%= link_to raw("JustinCampbell<span class=\"gray\">.me</span>"), root_url %></h1>
-    <p id="description">
-      I work with the awesome team at <%= link_to "Cramer Dev", "http://cramerdev.com" %>.<br />
-      In my free time I'm a Web Developer and gamer.<br />
-      Sometimes I take pictures of food or go snowboarding.<br />
-      <%= link_to "Résumé", resume_path %> |
-      <%= link_to "GitHub", "http://github.com/JustinCampbell" %> |
-      <%= link_to "@JustinCampbell", "http://twitter.com/JustinCampbell" %>
-    </p>
+  <div id="sidebar">
+    <div id="logo">
+      J
+    </div>
+    <ul id="navigation">
+      <li><%= link_to "Résumé", resume_path %></li>
+      <li><%= link_to "GitHub", "http://github.com/JustinCampbell" %></li>
+      <li><%= link_to "Twitter", "http://twitter.com/JustinCampbell" %></li>
+    </ul>
+  </div>
+  <div id="content">
     <%= yield %>
   </div>
 </body>
