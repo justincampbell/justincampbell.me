@@ -4,6 +4,6 @@ ul#projects
       = link_to project.url do
         - if project.image_url
           = image_tag project.image_url, title: project.name
-        -else
-          .name
+        - else
+          span.name
             = project.name

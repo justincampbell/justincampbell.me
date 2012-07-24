@@ -25,8 +25,9 @@ a
 
 #sidebar
   position: absolute
-  right: 0
+  right: 0px
   text-align: right
+  width: 150px
 
 #logo
   color: $orange
@@ -36,24 +37,26 @@ a
   font-size: 0.75em
   list-style-type: none
   li
-    margin: 0.5em 1em
+    margin: 0 1em 0.5em 0
 
 #content
   float: left
+  padding-right: 150px
 
 #projects
   .project
     +shadow-border(1px)
-    display: inline-block
-    float: both
+    display: block
+    float: left
     height: 200px
     margin: 1em
-    text-align: center
     width: 300px
     img
       width: 100%
     .name
+      display: block
       height: 100%
-      font: 2em futura
+      text-align: center
+      font: 2em Futura
       width: 100%
 
