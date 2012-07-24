@@ -1,0 +1,18 @@
+doctype html
+html
+  head
+    title JustinCampbell.me
+    = stylesheet_link_tag :application
+    = javascript_include_tag :application
+    = render "analytics/google"
+    = csrf_meta_tags
+  body
+    #sidebar
+      #logo J
+      ul#navigation
+        li = link_to "Résumé", resume_path
+        li = link_to "GitHub", "http://github.com/JustinCampbell"
+        li = link_to "Twitter", "http://twitter.com/JustinCampbell"
+    #content
+     = yield
+
