@@ -4,7 +4,7 @@ require 'rails/all'
 
 # If you have a Gemfile, require the gems listed there, including any gems
 # you've limited to :test, :development, or :production.
-Bundler.require(:default, Rails.env) if defined?(Bundler)
+Bundler.require(:default, :assets, Rails.env) if defined?(Bundler)
 
 module Justincampbell
   class Application < Rails::Application
@@ -41,5 +41,12 @@ module Justincampbell
 
     # Fix for Heroku + NewRelic and asset compilation
     config.assets.initialize_on_precompile = false
+
+    config.generators do |generate|
+      generate.helper = false
+      generate.javascripts = false
+      generate.stylesheets = false
+      generate.view_specs = false
+    end
   end
 end

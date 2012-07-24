@@ -1,0 +1,9 @@
+ul#projects
+  - @projects.each do |project|
+    li.project
+      = link_to project.url do
+        - if project.image_url
+          = image_tag project.image_url, title: project.name
+        - else
+          span.name
+            = project.name
