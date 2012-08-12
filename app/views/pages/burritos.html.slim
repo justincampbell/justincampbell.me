@@ -1,0 +1,60 @@
+ul#burritos
+  - (1..12).to_a.reverse.each do |n|
+    li data-weeks-ago=n &nbsp;
+#last-burrito
+  div = @burritos.first[:venue]
+  div = "#{time_ago_in_words @burritos.first[:createdAt]} ago"
+ul#top-burritos
+sass:
+  #burritos
+    li
+      background: red
+      display: inline-block
+      float: left
+      margin: 10px
+      height: 1px
+      min-height: 1px
+      width: 50px
+javascript:
+  burritos = #{raw @burritos.to_json}
+coffee:
+  DAY_LENGTH = 1000 * 60 * 60 * 24
+  WEEK_LENGTH = DAY_LENGTH * 7
+  YEAR_LENGTH = WEEK_LENGTH * 52
+
+  MAXIMUM_HEIGHT = 100
+
+  $ ->
+    # Create burrito dates in JS
+    for burrito in burritos
+      burrito.createdAt = new Date(burrito.createdAt)
+
+    # Create the weeks to hold burritos
+    weeks = []
+    for week in [1..12]
+      startDate = new Date (new Date() - WEEK_LENGTH * week)
+      thisWeek = { ago: week, burritos: [], startDate: startDate }
+      weeks.push thisWeek
+
+    # Place burritos into the week objects
+    for burrito in burritos
+      for week in weeks
+        if burrito.createdAt > week.startDate
+          week.burritos.push burrito
+          break
+
+    # Find the maximum burritos per week
+    maximum = 0
+    for week in weeks
+      count = week.burritos.length
+      maximum = count if count > maximum
+
+    # Set the height of the elements
+    for week in weeks
+      ago = week.ago
+      count = week.burritos.length
+      size = (count / maximum) * MAXIMUM_HEIGHT
+
+      element = $("#burritos > li[data-weeks-ago=#{ago}]")
+      element.height size
+

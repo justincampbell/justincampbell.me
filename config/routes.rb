@@ -1,5 +1,7 @@
 Justincampbell::Application.routes.draw do
-  root :to => 'projects#index'
+  root to: 'projects#index'
+
+  get 'burritos' => 'pages#burritos'
 
   get 'blog/:slug' => 'blog#show'
 
