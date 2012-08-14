@@ -2,8 +2,8 @@ ul#burritos
   - (1..12).to_a.reverse.each do |n|
     li data-weeks-ago=n &nbsp;
 #last-burrito
-  div = @burritos.first[:venue]
-  div = "#{time_ago_in_words @burritos.first[:createdAt]} ago"
+  div &nbsp;
+  div &nbsp;
 ul#top-burritos
 sass:
   #burritos
@@ -26,7 +26,7 @@ coffee:
 
   class Burrito
     constructor: (attributes) ->
-      @createdAt = new Date attributes.createdAt
+      @date = new Date attributes.date * 1000
       @venue = attributes.venue
 
     @all: new Burrito burrito for burrito in rawBurritos
@@ -34,10 +34,13 @@ coffee:
     @allForWeeksAgo: (weeksAgo) ->
       @all.filter (burrito) ->
         (new Date(new Date() - WEEK_LENGTH * weeksAgo)) <
-        burrito.createdAt <
+        burrito.date <
         (new Date(new Date() - WEEK_LENGTH * (weeksAgo - 1)))
 
-    createdAt: @createdAt
+    @last: ->
+      @all[0]
+
+    date: @date
     venue: @venue
 
   class Week

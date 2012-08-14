@@ -1,32 +1,42 @@
 class Foursquare
   LIMIT = 250
 
-  def self.burritos
-    #checkins.keep_if { |checkin| is_burrito?(checkin) }
+  class Checkin
+    attr_accessor :checkin
 
-    [
-      { venue: "Test1", createdAt: 1.day.ago },
-      { venue: "Test2", createdAt: 2.days.ago },
-      { venue: "Test1", createdAt: 3.days.ago },
-      { venue: "Test1", createdAt: 7.days.ago },
-      { venue: "Test2", createdAt: 8.days.ago },
-      { venue: "Test1", createdAt: 11.days.ago },
-      { venue: "Test3", createdAt: 14.days.ago },
-      { venue: "Test1", createdAt: 17.days.ago },
-      { venue: "Test3", createdAt: 23.days.ago },
-      { venue: "Test1", createdAt: 24.days.ago },
-      { venue: "Test2", createdAt: 30.days.ago },
-      { venue: "Test4", createdAt: 30.days.ago },
-      { venue: "Test1", createdAt: 31.days.ago },
-      { venue: "Test2", createdAt: 32.days.ago }
-    ]
+    def initialize(raw_checkin)
+      self.checkin = raw_checkin
+    end
+
+    def as_json(options = {})
+      {
+        date: date,
+        venue: venue
+      }
+    end
+
+    def categories
+      checkin.venue.categories.collect(&:name).join(", ") if checkin.venue
+    end
+
+    def date
+      checkin.createdAt
+    end
+
+    def venue
+      checkin.venue.name
+    end
+  end
+
+  def self.burritos
+    checkins.keep_if { |checkin| is_burrito? checkin }
   end
 
   def self.checkins
     Rails.cache.fetch("checkins") {
       result = []
 
-      20.times do |iteration|
+      1.times do |iteration|
         items = client.user_checkins(limit: LIMIT, offset: iteration * LIMIT).items
 
         break if items.empty?
@@ -34,7 +44,7 @@ class Foursquare
         result += items
       end
 
-      result
+      result.map { |checkin| Checkin.new checkin }
     }
   end
 
@@ -45,10 +55,6 @@ class Foursquare
   end
 
   def self.is_burrito?(checkin)
-    return unless checkin.venue
-
-    checkin.venue.categories.collect(&:name).any? { |category|
-      category =~ /Burrito|Mexican/
-    }
+    checkin.categories.match /Burrito|Mexican/ if checkin.categories
   end
 end
