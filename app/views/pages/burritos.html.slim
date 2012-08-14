@@ -16,7 +16,7 @@ sass:
       min-height: 1px
       width: 50px
 javascript:
-  burritos = #{raw @burritos.to_json}
+  rawBurritos = #{raw @burritos.to_json}
 coffee:
   DAY_LENGTH = 1000 * 60 * 60 * 24
   WEEK_LENGTH = DAY_LENGTH * 7
@@ -24,24 +24,33 @@ coffee:
 
   MAXIMUM_HEIGHT = 100
 
+  class Burrito
+    constructor: (attributes) ->
+      @createdAt = new Date attributes.createdAt
+      @venue = attributes.venue
+
+    @all: new Burrito burrito for burrito in rawBurritos
+
+    @allForWeeksAgo: (weeksAgo) ->
+      @all.filter (burrito) ->
+        (new Date(new Date() - WEEK_LENGTH * weeksAgo)) <
+        burrito.createdAt <
+        (new Date(new Date() - WEEK_LENGTH * (weeksAgo - 1)))
+
+    createdAt: @createdAt
+    venue: @venue
+
+  class Week
+    constructor: (weeksAgo) ->
+      @burritos = Burrito.allForWeeksAgo weeksAgo
+      @weeksAgo = weeksAgo
+
+    burritos: @burritos
+    weeksAgo: @weeksAgo
+
   $ ->
-    # Create burrito dates in JS
-    for burrito in burritos
-      burrito.createdAt = new Date(burrito.createdAt)
-
-    # Create the weeks to hold burritos
-    weeks = []
-    for week in [1..12]
-      startDate = new Date (new Date() - WEEK_LENGTH * week)
-      thisWeek = { ago: week, burritos: [], startDate: startDate }
-      weeks.push thisWeek
-
-    # Place burritos into the week objects
-    for burrito in burritos
-      for week in weeks
-        if burrito.createdAt > week.startDate
-          week.burritos.push burrito
-          break
+    # Create the weeks with burritos
+    weeks = (new Week weeksAgo for weeksAgo in [1..12])
 
     # Find the maximum burritos per week
     maximum = 0
@@ -51,7 +60,7 @@ coffee:
 
     # Set the height of the elements
     for week in weeks
-      ago = week.ago
+      ago = week.weeksAgo
       count = week.burritos.length
       size = (count / maximum) * MAXIMUM_HEIGHT
 
