@@ -1,9 +1,10 @@
+= javascript_include_tag 'https://raw.github.com/rmm5t/jquery-timeago/master/jquery.timeago.js'
 ul#burritos
   - (1..12).to_a.reverse.each do |n|
     li data-weeks-ago=n &nbsp;
 #last-burrito
-  div &nbsp;
-  div &nbsp;
+  div.name &nbsp;
+  abbr.timeago &nbsp;
 ul#top-burritos
 sass:
   #burritos
@@ -69,4 +70,7 @@ coffee:
 
       element = $("#burritos > li[data-weeks-ago=#{ago}]")
       element.height size
+      element.attr 'data-burrito-count', count
 
+    # Time ago in words
+    $('abbr.timeago').timeago()
