@@ -42,7 +42,28 @@ coffee:
       @all[0]
 
     date: @date
+    timeAgoInWords: -> @date.stringify
     venue: @venue
+
+  class Venue
+    constructor: (name, count) ->
+      @name = name
+      @count = count
+
+    @top: (size = 5) ->
+      result = {}
+      tuples = []
+      for burrito in Burrito.all
+        result[burrito.venue] ||= 0
+        result[burrito.venue] += 1
+      tuples.push [venue, count] for venue, count of result
+      tuples = tuples.sort (a, b) ->
+        if a[1] < b[1] then 1 else (if a[1] > b[1] then -1 else 0)
+      console.dir tuples
+      new Venue tuple[0], tuple[1] for tuple in tuples.slice 0, size
+
+    name: @name
+    count: @count
 
   class Week
     constructor: (weeksAgo) ->
@@ -62,7 +83,18 @@ coffee:
       count = week.burritos.length
       maximum = count if count > maximum
 
-    # Set the height of the elements
+    # Set the last burrito
+    $('#last-burrito > .name').html Burrito.last().venue
+    $('#last-burrito > .timeago').attr 'title', Burrito.last().date.toISOString()
+
+    # Set the top burritos
+    for venue in Venue.top 5
+      name = venue.name
+      count = venue.count
+      pluralization = if count > 1 then 's' else ''
+      $('#top-burritos').append $('<li>').html("#{name} (#{count} time#{pluralization})")
+
+    # Set the height of the weeks
     for week in weeks
       ago = week.weeksAgo
       count = week.burritos.length
