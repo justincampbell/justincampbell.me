@@ -1,6 +1,6 @@
 = javascript_include_tag 'https://raw.github.com/rmm5t/jquery-timeago/master/jquery.timeago.js'
 ul#burritos
-  - (1..12).to_a.reverse.each do |n|
+  - (1..52).to_a.reverse.each do |n|
     li data-weeks-ago=n &nbsp;
 #last-burrito
   div.name &nbsp;
@@ -12,10 +12,10 @@ sass:
       background: red
       display: inline-block
       float: left
-      margin: 10px
+      margin: 2px
       height: 1px
       min-height: 1px
-      width: 50px
+      width: 10px
 javascript:
   rawBurritos = #{raw @burritos.to_json}
 coffee:
@@ -75,7 +75,7 @@ coffee:
 
   $ ->
     # Create the weeks with burritos
-    weeks = (new Week weeksAgo for weeksAgo in [1..12])
+    weeks = (new Week weeksAgo for weeksAgo in [1..52])
 
     # Find the maximum burritos per week
     maximum = 0

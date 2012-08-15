@@ -36,7 +36,7 @@ class Foursquare
     Rails.cache.fetch("checkins") {
       result = []
 
-      1.times do |iteration|
+      5.times do |iteration|
         items = client.user_checkins(limit: LIMIT, offset: iteration * LIMIT).items
 
         break if items.empty?
