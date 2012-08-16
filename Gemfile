@@ -22,6 +22,7 @@ end
 
 group :production do
   gem 'dalli'
+  gem 'memcachier'
   gem 'pg'
 end
 
