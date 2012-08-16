@@ -1,0 +1,11 @@
+doctype html
+html
+  head
+    title FIXME
+    = stylesheet_link_tag :normalize
+    = javascript_include_tag :application
+    = render "analytics/google"
+    = csrf_meta_tags
+  body
+    = yield
+
