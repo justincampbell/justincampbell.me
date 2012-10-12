@@ -139,11 +139,13 @@ GEM
     rb-fsevent (0.9.1)
     rb-inotify (0.8.8)
       ffi (>= 0.5.0)
-    rdiscount (1.6.8)
     rdoc (3.12)
       json (~> 1.4)
+    redcarpet (2.2.0)
     rest-client (1.6.7)
       mime-types (>= 1.16)
+    rouge (0.2.1)
+      thor
     rspec (2.11.0)
       rspec-core (~> 2.11.0)
       rspec-expectations (~> 2.11.0)
@@ -232,7 +234,8 @@ DEPENDENCIES
   rails
   rake
   rb-fsevent
-  rdiscount
+  redcarpet
+  rouge
   rspec-rails
   sass-rails
   simplecov
