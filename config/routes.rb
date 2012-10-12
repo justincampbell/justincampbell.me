@@ -7,4 +7,6 @@ Justincampbell::Application.routes.draw do
   get 'post/:tumblr_id/:slug' => 'blog#show'
 
   get 'resume' => 'resume#index'
+
+  get 'til' => 'til#index'
 end
