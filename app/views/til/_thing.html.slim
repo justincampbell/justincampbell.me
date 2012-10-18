@@ -1,2 +1,4 @@
 .thing
-  = markdown thing
+  = markdown thing.body
+  = link_to "Link", til_path(thing)
+  #{time_ago_in_words thing.created_at} ago

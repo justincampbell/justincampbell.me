@@ -8,5 +8,5 @@ Justincampbell::Application.routes.draw do
 
   get 'resume' => 'resume#index'
 
-  get 'til' => 'til#index'
+  resources :til, only: [:index, :show]
 end
