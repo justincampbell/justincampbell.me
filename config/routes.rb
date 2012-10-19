@@ -11,7 +11,7 @@ Justincampbell::Application.routes.draw do
   get 'til/new' => 'til#new', as: :til_new
   post 'til' => 'til#create', as: :til_create
   post 'til/preview' => 'til#preview', as: :til_preview
-  get 'til/' => 'til#index', as: :til_root
+  get 'til' => 'til#index', as: :til_root
   get 'til/:slug' => 'til#show', as: :til_show
 
   get 'sign_in' => 'sessions#new', as: :sign_in

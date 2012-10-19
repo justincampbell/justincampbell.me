@@ -3,6 +3,11 @@ class TilController < ApplicationController
 
   def index
     @things = Til.order "created_at desc"
+
+    respond_to do |format|
+      format.html
+      format.atom { render layout: false }
+    end
   end
 
   def show
