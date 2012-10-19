@@ -4,6 +4,8 @@ module ApplicationHelper
       autolink: true,
       fenced_code_blocks: true
 
+    md.gsub! /@(\w+)/, "[@\\1](https://twitter.com/intent/user?screen_name=\\1)"
+
     html = redcarpet.render md
 
     unless options[:add_header_levels] == false
