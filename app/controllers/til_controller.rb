@@ -1,4 +1,6 @@
 class TilController < ApplicationController
+  before_filter :ensure_signed_in, only: [:create, :new, :preview]
+
   def index
     @things = Til.all
   end
