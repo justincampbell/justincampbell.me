@@ -1,0 +1,38 @@
+@import bourbon
+@import normalize
+
+@import pygments-railscasts
+
+@import url(http://fonts.googleapis.com/css?family=Give+You+Glory)
+
+body
+  background: #ddd
+  font: 16pt $helvetica
+
+.wrapper
+  margin: 0 auto
+  max-width: 800px
+  width: 100%
+
+h1
+  font: 3em 'Give You Glory' cursive
+  text-align: center
+
+code
+  +border-radius(0.25em)
+  background: #2B2B2B
+  color: #E6E1DC
+  margin: 0 0.25em 0 0
+  padding: 0.25em
+
+.highlight
+  +border-radius(0.25em)
+  font-face: $monospace
+  padding: 0.25em
+
+.thing
+  background: #eee
+  border: 1px #999 solid
+  margin: 1em auto
+  padding: 1em
+  width: 100%

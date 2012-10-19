@@ -1,0 +1,11 @@
+doctype html
+html
+  head
+    title Today, I Learned...
+    = stylesheet_link_tag :til
+    = render "analytics/google"
+  body
+    .wrapper
+      h1 Today, I Learned...
+      = yield
+
