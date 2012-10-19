@@ -1,4 +1,4 @@
 .thing
   = markdown thing.body
-  = link_to "Link", til_path(thing)
-  #{time_ago_in_words thing.created_at} ago
+  = link_to "Link", til_path(thing) if thing.persisted?
+  #{time_ago_in_words(thing.created_at || Time.now)} ago

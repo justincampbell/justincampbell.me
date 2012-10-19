@@ -8,5 +8,11 @@ Justincampbell::Application.routes.draw do
 
   get 'resume' => 'resume#index'
 
-  resources :til, only: [:index, :show]
+  namespace :til do
+    get '/new' => 'til#new', as: :new
+    post '/' => 'til#create', as: :create
+    post '/preview' => 'til#preview', as: :preview
+    get '/' => 'til#index'
+    get '/:slug' => 'til#show', as: :show
+  end
 end
