@@ -12,9 +12,15 @@ body
 .wrapper
   margin: 0 auto
   max-width: 800px
+  padding: 0
   width: 100%
 
+a
+  color: #666
+  text-decoration: none
+
 h1
+  color: black
   font: 3em 'Give You Glory' cursive
   text-align: center
 
@@ -31,8 +37,14 @@ code
   padding: 0.25em
 
 .thing
-  background: #eee
-  border: 1px #999 solid
-  margin: 1em auto
-  padding: 1em
-  width: 100%
+  margin-bottom: 4em
+
+  .body
+    +border-radius(0.25em)
+    background: #eee
+    border: 1px #999 solid
+    padding: 1em
+
+  .timestamp
+    float: right
+    font-size: golden-ratio(1em, -1)

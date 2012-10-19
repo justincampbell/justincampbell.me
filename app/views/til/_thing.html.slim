@@ -1,3 +1,8 @@
 .thing
-  = markdown thing.body
-  = link_to "#{time_ago_in_words(thing.created_at || Time.now)} ago", til_show_path(thing)
+  .body
+    = markdown thing.body
+
+  = link_to "#{time_ago_in_words(thing.created_at || Time.now)} ago",
+    til_show_path(thing),
+    class: :timestamp,
+    title: (thing.created_at || Time.now).iso8601
