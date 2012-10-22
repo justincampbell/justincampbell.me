@@ -3,7 +3,7 @@ html
   head
     title Today, I Learned...
     = stylesheet_link_tag :til
-    = auto_discovery_link_tag :atom, "til.atom", title: "Today, I Learned..."
+    = auto_discovery_link_tag :atom, "http://feeds.feedburner.com/justincampbell/til", title: "Today, I Learned..."
     = render "analytics/google"
   body
     .wrapper
