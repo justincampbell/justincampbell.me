@@ -1,8 +1,13 @@
 class TilController < ApplicationController
-  before_filter :ensure_signed_in, only: [:create, :new, :preview]
+  before_filter :ensure_signed_in, except: [:index, :show]
 
   def index
     @things = Til.order "created_at desc"
+
+    respond_to do |format|
+      format.html
+      format.atom { render layout: false }
+    end
   end
 
   def show
@@ -23,5 +28,16 @@ class TilController < ApplicationController
     @thing = Til.new params[:til]
 
     render partial: 'thing', locals: { thing: @thing }
+  end
+
+  def update
+    @thing = Til.find_by_slug params[:slug]
+    @thing.update_attributes params[:til]
+
+    redirect_to til_show_path(@thing)
+  end
+
+  def edit
+    @thing = Til.find_by_slug params[:slug]
   end
 end

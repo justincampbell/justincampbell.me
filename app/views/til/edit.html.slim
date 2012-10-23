@@ -1,0 +1,7 @@
+= form_for @thing, url: til_update_path(@thing) do |form|
+  = form.text_area :body, placeholder: "Body"
+  br
+  = form.submit "Update"
+.preview
+= javascript_include_tag 'admin/til'
+= stylesheet_link_tag 'admin/til'
