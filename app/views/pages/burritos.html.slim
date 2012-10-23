@@ -1,0 +1,185 @@
+= javascript_include_tag :jquery
+= javascript_include_tag 'https://raw.github.com/rmm5t/jquery-timeago/master/jquery.timeago.js'
+#content
+  #header
+    h1 Burritos!
+  #top
+    svg#timeline preserveAspectRatio="none" viewBox="0 0 520 100"
+      - (1..52).to_a.reverse.each do |weeks_ago|
+        - x = (52 - weeks_ago) * 10
+        rect.week data-weeks-ago=weeks_ago x=x y=99 height=1 width=8
+    #last-burrito
+      h2 Last Burrito
+      div.name &nbsp;
+      abbr.timeago &nbsp;
+  #left
+    #top-burritos
+      h2 Most Burritos
+      ul
+  #right
+    h3 Wat.
+    p This super-important web service tracks my burrito intake.
+
+    h3 Why?
+    p Because Burritos are delicious.
+
+    h3 How?
+    p By tracking foursquare checkins and looking for venues that fall into certain categories. This makes a few assumptions:
+    ul
+      li I checkin every time I eat somewhere
+      li Every time I checkin to a venue that has Mexican or Burrito in it&apos;s categories, I order a Burrito
+      li I do not eat Burritos at home
+    p These assumptions are historically accurate.
+
+    h3 I want to know more!
+    p Then you should probably check out the source code <a href="https://github.com/JustinCampbell/justincampbell.me/blob/master/app/views/pages/burritos.html.slim">here</a>.
+
+sass:
+  @import url(http://fonts.googleapis.com/css?family=Quando)
+
+  body
+    font-size: 16px
+  h1, h2, h3
+    font-family: Quando
+    font-weight: normal
+    margin: 0
+    padding: 0
+  h1
+    font-size: 5em
+  h2
+    font-size: 1em
+  h3
+    font-size: 1em
+  p
+    padding: 1em
+  abbr[title]
+    border: none
+  #content
+    margin: 0 auto
+    width: 1120px
+  #header
+    text-align: center
+  #top
+    width: 100%
+  #timeline
+    float: left
+    height: 60px
+    margin-top: 100px
+    width: 832px
+    .week
+      fill: black
+      stroke: black
+      stroke-width: 0.5
+  #last-burrito
+    float: right
+    text-align: center
+    margin-left: 32px
+    height: 160px
+    width: 256px
+    .name
+      font-size: 1em
+    .timeago
+      font-size: 0.75em
+  #left
+    float: left
+    margin-top: 32px
+    width: 544px
+  #right
+    float: right
+    margin-left: 32px
+    margin-top: 32px
+    width: 544px
+javascript:
+  rawBurritos = #{raw @burritos.to_json}
+coffee:
+  DAY_LENGTH = 1000 * 60 * 60 * 24
+  WEEK_LENGTH = DAY_LENGTH * 7
+  YEAR_LENGTH = WEEK_LENGTH * 52
+
+  class Burrito
+    constructor: (attributes) ->
+      @date = new Date attributes.date * 1000
+      @venue = attributes.venue
+
+    @all: new Burrito burrito for burrito in rawBurritos
+
+    @allForWeeksAgo: (weeksAgo) ->
+      @all.filter (burrito) ->
+        (new Date(new Date() - WEEK_LENGTH * weeksAgo)) <
+        burrito.date <
+        (new Date(new Date() - WEEK_LENGTH * (weeksAgo - 1)))
+
+    @last: ->
+      @all[0]
+
+    date: @date
+    timeAgoInWords: -> @date.stringify
+    venue: @venue
+
+  class Venue
+    constructor: (name, count) ->
+      @name = name
+      @count = count
+
+    @top: (size) ->
+      result = {}
+      tuples = []
+      for burrito in Burrito.all
+        result[burrito.venue] ||= 0
+        result[burrito.venue] += 1
+      tuples.push [venue, count] for venue, count of result
+      tuples = tuples.sort (a, b) ->
+        if a[1] < b[1] then 1 else (if a[1] > b[1] then -1 else 0)
+      new Venue tuple[0], tuple[1] for tuple in tuples.slice 0, size
+
+    name: @name
+    count: @count
+
+  class Week
+    constructor: (weeksAgo) ->
+      @burritos = Burrito.allForWeeksAgo weeksAgo
+      @weeksAgo = weeksAgo
+
+    burritos: @burritos
+    weeksAgo: @weeksAgo
+
+  $ ->
+    # Create the weeks with burritos
+    weeks = (new Week weeksAgo for weeksAgo in [1..52])
+
+    # Find the maximum burritos per week
+    maximum = 0
+    for week in weeks
+      count = week.burritos.length
+      maximum = count if count > maximum
+
+    # Set the last burrito
+    $('#last-burrito > .name').html Burrito.last().venue
+    $('#last-burrito > .timeago').attr 'title', Burrito.last().date.toISOString()
+
+    # Set the top burritos
+    for venue in Venue.top 5
+      name = venue.name
+      count = venue.count
+      pluralization = if count > 1 then 's' else ''
+      li = $('<li>').html("#{name} (#{count} time#{pluralization})")
+      $('#top-burritos > ul').append li
+
+    # Set the weeks with burritos
+    for week in weeks
+      ago = week.weeksAgo
+      count = week.burritos.length
+      pluralization = if count > 1 then 's' else ''
+      size = (count / maximum) * 100
+      size = 1 if size < 1
+
+      element = $("#timeline > rect[data-weeks-ago=#{ago}]")
+      console.dir element
+      element.attr 'height', size
+      element.attr 'y', 100 - size
+      element.attr 'data-burrito-count', count
+      element.attr 'title', "#{count} burrito#{pluralization}"
+
+    # Initialize plugins
+    $('abbr.timeago').timeago()
+
