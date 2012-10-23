@@ -7,6 +7,10 @@ class Foursquare
 
     def initialize(raw_checkin)
       self.checkin = raw_checkin
+
+      # Get what we need and trash the rest
+      %w[categories date venue].each { |method| self.send method }
+      self.checkin = nil
     end
 
     def as_json(options = {})
@@ -17,15 +21,15 @@ class Foursquare
     end
 
     def categories
-      checkin.venue.categories.collect(&:name).join(", ") if checkin.venue
+      @categories ||= checkin.venue ? checkin.venue.categories.collect(&:name).join(", ") : ""
     end
 
     def date
-      checkin.createdAt
+      @date ||= checkin.createdAt or ""
     end
 
     def venue
-      checkin.venue.name
+      @venue ||= checkin.venue ? checkin.venue.name : ""
     end
   end
 
