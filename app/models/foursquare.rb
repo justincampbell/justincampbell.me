@@ -1,5 +1,6 @@
 class Foursquare
   LIMIT = 250
+  RANGE = 1.year
 
   class Checkin
     attr_accessor :checkin
@@ -36,12 +37,16 @@ class Foursquare
     Rails.cache.fetch("checkins") {
       result = []
 
-      5.times do |iteration|
-        items = client.user_checkins(limit: LIMIT, offset: iteration * LIMIT).items
-
-        break if items.empty?
+      10.times do |iteration|
+        items = client.user_checkins(
+          afterTimestamp: RANGE.ago.to_i,
+          limit: LIMIT,
+          offset: iteration * LIMIT
+        ).items
 
         result += items
+
+        break if items.count < LIMIT
       end
 
       result.map { |checkin| Checkin.new checkin }
