@@ -38,7 +38,7 @@ class Foursquare
   end
 
   def self.checkins
-    Rails.cache.fetch("checkins") {
+    Rails.cache.fetch("checkins", expires_in: 15.minutes) {
       result = []
 
       10.times do |iteration|
