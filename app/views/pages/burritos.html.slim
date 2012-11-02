@@ -12,6 +12,7 @@
       h2 Last Burrito
       div.name &nbsp;
       abbr.timeago &nbsp;
+    h2#this-weeks-burritos
   #left
     #top-burritos
       h2 Most Burritos
@@ -70,16 +71,18 @@ sass:
       fill: black
       stroke: black
       stroke-width: 0.5
-  #last-burrito
+  #last-burrito, #this-weeks-burritos
     float: right
     text-align: center
-    margin-left: 32px
-    height: 160px
+    margin: 0 auto 2em
     width: 256px
+  #last-burrito
     .name
       font-size: 1em
     .timeago
       font-size: 0.75em
+  #this-weeks-burritos
+    font-size: 1em
   #left
     float: left
     margin-top: 32px
@@ -134,7 +137,7 @@ coffee:
     count: @count
 
   class Week
-    constructor: (weeksAgo) ->
+    constructor: (weeksAgo = 0) ->
       @weeksAgo = weeksAgo
 
     burritos: -> Burrito.allForTimeRange(this.weekStart(), this.weekEnd())
@@ -159,6 +162,14 @@ coffee:
     # Set the last burrito
     $('#last-burrito > .name').html Burrito.last().venue
     $('#last-burrito > .timeago').attr 'title', Burrito.last().date.toISOString()
+
+    # Set the burritos this week
+    thisWeek = new Week
+    count = thisWeek.burritos().length
+    buffer = "#{count} burrito"
+    buffer += "s" unless count == 1
+    buffer += " this week"
+    $('#this-weeks-burritos').html buffer
 
     # Set the top burritos
     for venue in Venue.top 5
