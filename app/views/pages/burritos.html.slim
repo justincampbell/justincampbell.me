@@ -103,11 +103,9 @@ coffee:
 
     @all: new Burrito burrito for burrito in rawBurritos
 
-    @allForWeeksAgo: (weeksAgo) ->
+    @allForTimeRange: (start, end) ->
       @all.filter (burrito) ->
-        (new Date(new Date() - WEEK_LENGTH * weeksAgo)) <
-        burrito.date <
-        (new Date(new Date() - WEEK_LENGTH * (weeksAgo - 1)))
+        start < burrito.date < end
 
     @last: ->
       @all[0]
@@ -137,10 +135,11 @@ coffee:
 
   class Week
     constructor: (weeksAgo) ->
-      @burritos = Burrito.allForWeeksAgo weeksAgo
       @weeksAgo = weeksAgo
 
-    burritos: @burritos
+    burritos: -> Burrito.allForTimeRange(this.weekStart(), this.weekEnd())
+    weekStart: -> new Date(new Date() - WEEK_LENGTH * this.weeksAgo)
+    weekEnd: -> new Date(new Date() - WEEK_LENGTH * (this.weeksAgo - 1))
     weeksAgo: @weeksAgo
 
   $ ->
@@ -150,7 +149,7 @@ coffee:
     # Find the maximum burritos per week
     maximum = 0
     for week in weeks
-      count = week.burritos.length
+      count = week.burritos().length
       maximum = count if count > maximum
 
     # Set the last burrito
@@ -168,13 +167,12 @@ coffee:
     # Set the weeks with burritos
     for week in weeks
       ago = week.weeksAgo
-      count = week.burritos.length
+      count = week.burritos().length
       pluralization = if count > 1 then 's' else ''
       size = (count / maximum) * 100
       size = 1 if size < 1
 
       element = $("#timeline > rect[data-weeks-ago=#{ago}]")
-      console.dir element
       element.attr 'height', size
       element.attr 'y', 100 - size
       element.attr 'data-burrito-count', count
