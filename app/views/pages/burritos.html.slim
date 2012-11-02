@@ -138,8 +138,12 @@ coffee:
       @weeksAgo = weeksAgo
 
     burritos: -> Burrito.allForTimeRange(this.weekStart(), this.weekEnd())
-    weekStart: -> new Date(new Date() - WEEK_LENGTH * this.weeksAgo)
-    weekEnd: -> new Date(new Date() - WEEK_LENGTH * (this.weeksAgo - 1))
+    weekStart: ->
+      date = new Date(new Date() - WEEK_LENGTH * this.weeksAgo)
+      date.setDate(date.getDate() - date.getDay())
+      date = new Date(date.toDateString())
+      date.getTime()
+    weekEnd: -> new Date(this.weekStart() + WEEK_LENGTH)
     weeksAgo: @weeksAgo
 
   $ ->
