@@ -1,8 +1,0 @@
-# Use the README file as a reference to customize settings.
-
-Project:
-  fields:
-    default: name, url, published_at
-    form: name, url, image_url, published_at
-  relationships: 
-  application: Application

@@ -13,7 +13,6 @@ gem 'redcarpet'
 gem 'rouge'
 gem 'slim-rails'
 gem 'thin'
-gem 'typus'
 
 group :assets do
   gem 'bourbon'
