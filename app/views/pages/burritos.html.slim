@@ -13,9 +13,10 @@
       div.name &nbsp;
       abbr.timeago &nbsp;
     h2#this-weeks-burritos
+    h2#this-years-burritos
   #left
     #top-burritos
-      h2 Most Burritos
+      h2 Top Burritos for the last year
       ul
   #right
     h3 Wat.
@@ -71,17 +72,17 @@ sass:
       fill: black
       stroke: black
       stroke-width: 0.5
-  #last-burrito, #this-weeks-burritos
+  #last-burrito, #this-weeks-burritos, #this-years-burritos
     float: right
     text-align: center
-    margin: 0 auto 2em
+    margin: 0 auto 1em
     width: 256px
   #last-burrito
     .name
-      font-size: 1em
+      font: 1.5em Quando
     .timeago
       font-size: 0.75em
-  #this-weeks-burritos
+  #this-weeks-burritos, #this-years-burritos
     font-size: 1em
   #left
     float: left
@@ -168,8 +169,11 @@ coffee:
     count = thisWeek.burritos().length
     buffer = "#{count} Burrito"
     buffer += "s" unless count == 1
-    buffer += " this week"
+    buffer += " so far this week"
     $('#this-weeks-burritos').html buffer
+
+    # Set the burritos this year
+    $('#this-years-burritos').html "#{Burrito.all.length} Burritos/year"
 
     # Set the top burritos
     for venue in Venue.top 5
