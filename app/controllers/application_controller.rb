@@ -18,6 +18,10 @@ class ApplicationController < ActionController::Base
   private
 
   def admin_password
-    ENV['ADMIN_PASSWORD'] or "password"
+    if Rails.env.production?
+      ENV['ADMIN_PASSWORD']
+    else
+      "password"
+    end
   end
 end
