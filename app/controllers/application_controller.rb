@@ -19,7 +19,7 @@ class ApplicationController < ActionController::Base
 
   def admin_password
     if Rails.env.production?
-      ENV['ADMIN_PASSWORD']
+      ENV['ADMIN_PASSWORD'] || raise("No admin password set")
     else
       "password"
     end
