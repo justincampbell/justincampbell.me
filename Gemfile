@@ -14,7 +14,7 @@ gem 'rake'
 gem 'redcarpet'
 gem 'rouge'
 gem 'slim-rails'
-gem 'thin'
+gem 'unicorn'
 
 group :assets do
   gem 'bourbon'
@@ -30,6 +30,7 @@ group :production do
 end
 
 group :development, :test do
+  gem 'foreman'
   gem 'rspec-rails'
   gem 'sqlite3'
 
