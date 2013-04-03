@@ -20,7 +20,7 @@ textAreaUpdated = ->
   cleanSlug()
 
 updateSlug = ->
-  $('#til_slug').attr 'value', $('#til_body').attr('value').split("\n")[0]
+  $('#til_slug').attr 'value', $('#til_body').val().split("\n")[0]
 
 $ ->
   $('#til_body').keyup ->
