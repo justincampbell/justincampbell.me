@@ -1,19 +1,14 @@
 doctype html
 html
   head
-    title justincampbell.me
+    title= title
     = stylesheet_link_tag :application
-    = javascript_include_tag :application
+    = tag :meta, name: :viewport, content: 'width=device-width'
     = auto_discovery_link_tag :atom, "til.atom", title: "Today, I Learned..."
-    = render "analytics/google"
     = csrf_meta_tags
   body
-    #sidebar
-      #logo J
-      ul#navigation
-        li = link_to "Résumé", resume_path
-        li = link_to "GitHub", "http://github.com/justincampbell"
-        li = link_to "Twitter", "http://twitter.com/justincampbell"
+    = render 'shared/sidebar'
     #content
-     = yield
-
+      = yield
+    = javascript_include_tag :application
+    = render 'analytics/google'

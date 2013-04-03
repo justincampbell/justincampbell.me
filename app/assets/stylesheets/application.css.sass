@@ -2,9 +2,11 @@
 @import normalize
 
 @import url(http://fonts.googleapis.com/css?family=Pacifico)
+@import url(http://fonts.googleapis.com/css?family=Quando)
 
 $dark-gray: #333
 $orange: #ff8000
+$white: white
 
 $link-color: $dark-gray
 $link-hover-color: $orange
@@ -13,15 +15,25 @@ $text-color: $dark-gray
 @mixin shadow-border($size)
   @include box-shadow(0px 0px 0px $size black)
 
+@import hire
+@import til
+
 body
   color: $text-color
-  font: 16pt $helvetica
+  font: 16pt Quando
 
 a
+  @include transition (all 0.25s ease)
   color: $link-color
   text-decoration: none
   &:hover
     color: $link-hover-color
+  &.highlight
+    background-color: $link-hover-color
+    color: white
+    padding: 0.2em
+    &:hover
+      background-color: $link-color
 
 #sidebar
   position: absolute
@@ -32,6 +44,8 @@ a
 #logo
   color: $orange
   font: 72pt Pacifico
+  a
+    color: $orange
 
 #navigation
   display: block
@@ -40,6 +54,16 @@ a
   padding: 0
   li
     margin: 0 1em 0.5em 0
+  a
+    color: $link-color
+    &:hover
+      color: $link-hover-color
+    &.highlight
+      background-color: $link-hover-color
+      color: white
+      padding: 0.2em
+      &:hover
+        background-color: $link-color
 
 #content
   float: left
@@ -70,4 +94,3 @@ a
     font: 2em Futura
     vertical-align: middle
     width: 100%
-

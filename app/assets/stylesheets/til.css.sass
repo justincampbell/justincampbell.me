@@ -1,61 +1,58 @@
-@import bourbon
-@import normalize
-
 @import pygments-railscasts
 
 @import url(http://fonts.googleapis.com/css?family=Give+You+Glory)
 
-body
+#til
   background: #ddd
   font: 16pt $helvetica
 
-.wrapper
-  margin: 0 auto
-  max-width: 960px
-  padding: 0
-  width: 100%
+  .wrapper
+    margin: 0 auto
+    max-width: 960px
+    padding: 0
+    width: 100%
 
-a
-  color: #066EAC
-  text-decoration: none
+  a
+    color: #066EAC
+    text-decoration: none
 
-h1
-  color: black
-  font: 3em 'Give You Glory' cursive
-  text-align: center
+  h1
+    color: black
+    font: 5em 'Give You Glory' cursive
+    text-align: center
 
-.thing
-  margin-bottom: 4em
+  .thing
+    margin-bottom: 4em
 
-  .body
-    border-radius: 0.25em
-    background: #eee
-    border: 1px #999 solid
-    padding: 1em 2em
-
-    p, pre
-      margin: 1em 0
-
-    code, pre
-      background: #2B2B2B
+    .body
       border-radius: 0.25em
-      color: #E6E1DC
-      font-face: $monospace
+      background: #eee
+      border: 1px #999 solid
+      padding: 1em 2em
 
-    code
-      margin: 0 0.25em 0 0
-      padding: 0.125em 0.25em
-      white-space: nowrap
+      p, pre
+        margin: 1em 0
 
-    pre
-      padding: 0.25em
+      code, pre
+        background: #2B2B2B
+        border-radius: 0.25em
+        color: #E6E1DC
+        font-face: $monospace
 
-    img
-      display: block
-      margin: 0 auto
+      code
+        margin: 0 0.25em 0 0
+        padding: 0.125em 0.25em
+        white-space: nowrap
 
-  .timestamp
-    color: #666
-    float: right
-    font-size: golden-ratio(1em, -1)
-    margin: golden-ratio(1em, -1)
+      pre
+        padding: 0.25em
+
+      img
+        display: block
+        margin: 0 auto
+
+    .timestamp
+      color: #666
+      float: right
+      font-size: golden-ratio(1em, -1)
+      margin: golden-ratio(1em, -1)

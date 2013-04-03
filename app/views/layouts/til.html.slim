@@ -2,11 +2,13 @@ doctype html
 html
   head
     title Today, I Learned...
-    = stylesheet_link_tag :til
+    = stylesheet_link_tag :application
+    = tag :meta, name: :viewport, content: 'width=device-width'
     = auto_discovery_link_tag :atom, "http://feeds.feedburner.com/justincampbell/til", title: "Today, I Learned..."
     = render "analytics/google"
-  body
+  body#til
     .wrapper
+      = render 'shared/sidebar'
       = link_to til_root_path do
         h1 Today, I Learned...
       = yield

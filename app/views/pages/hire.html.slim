@@ -1,0 +1,15 @@
+- content_for(:title) { "Hire Justin" }
+#hire
+  h1 Hire <a href="/">Justin</a>
+  .left
+    ul.skills
+      - skills.each do |skill|
+        li = skill
+  .right
+    p= availability || "I'm not currently looking for work."
+    - if availability
+      p
+        |
+          Get in touch via <a class="highlight"
+          href="mailto:justin@justincampbell.me">email</a> or <a
+          class="highlight" href="skype:cmsjustin?chat">Skype</a>.
