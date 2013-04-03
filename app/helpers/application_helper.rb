@@ -2,7 +2,7 @@ module ApplicationHelper
   TWITTER_URL_PREFIX = "https://twitter.com/intent/user?screen_name="
 
   def availability
-    ENV['AVAILABILITY']
+    ENV['AVAILABILITY'].to_s
   end
 
   def skills
