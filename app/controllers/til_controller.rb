@@ -2,7 +2,7 @@ class TilController < ApplicationController
   before_filter :ensure_signed_in, except: [:index, :show]
 
   def index
-    @things = Til.order "created_at desc"
+    @things = Til.order("created_at desc").page(params[:page]).per(5)
 
     respond_to do |format|
       format.html
