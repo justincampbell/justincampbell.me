@@ -1,6 +1,19 @@
 module ApplicationHelper
   TWITTER_URL_PREFIX = "https://twitter.com/intent/user?screen_name="
 
+  def availability
+    ENV['AVAILABILITY']
+  end
+
+  def skills
+    ENV['SKILLS'].to_s.split
+  end
+
+  def title
+    string = content_for(:title)
+    string.present? ? string : "justincampbell.me"
+  end
+
   def markdown(md, options={})
     redcarpet = Redcarpet::Markdown.new MarkdownRenderer,
       autolink: true,

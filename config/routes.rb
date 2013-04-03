@@ -2,6 +2,7 @@ Justincampbell::Application.routes.draw do
   root to: 'projects#index'
 
   get 'burritos' => 'pages#burritos'
+  get 'hire' => 'pages#hire'
 
   get 'blog/:slug' => 'blog#show'
 

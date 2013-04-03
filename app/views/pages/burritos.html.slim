@@ -1,40 +1,45 @@
-= javascript_include_tag :jquery
-= javascript_include_tag 'https://raw.github.com/rmm5t/jquery-timeago/master/jquery.timeago.js'
-#content
-  #header
-    h1 Burritos!
-  #top
-    svg#timeline preserveAspectRatio="none" viewBox="0 0 520 100"
-      - (1..52).to_a.reverse.each do |weeks_ago|
-        - x = (52 - weeks_ago) * 10
-        rect.week data-weeks-ago=weeks_ago x=x y=99 height=1 width=8
-    #last-burrito
-      h2 Last Burrito
-      div.name &nbsp;
-      abbr.timeago &nbsp;
-    h2#this-weeks-burritos
-    h2#this-years-burritos
-  #left
-    #top-burritos
-      h2 Top Burritos for the last year
-      ul
-  #right
-    h3 Wat.
-    p This super-important web service tracks my burrito intake.
+doctype html
+html
+  head
+    title Burritos!
+    = javascript_include_tag :jquery
+    = javascript_include_tag 'https://raw.github.com/rmm5t/jquery-timeago/master/jquery.timeago.js'
+  body
+    #content
+      #header
+        h1 Burritos!
+      #top
+        svg#timeline preserveAspectRatio="none" viewBox="0 0 520 100"
+          - (1..52).to_a.reverse.each do |weeks_ago|
+            - x = (52 - weeks_ago) * 10
+            rect.week data-weeks-ago=weeks_ago x=x y=99 height=1 width=8
+        #last-burrito
+          h2 Last Burrito
+          div.name &nbsp;
+          abbr.timeago &nbsp;
+        h2#this-weeks-burritos
+        h2#this-years-burritos
+      #left
+        #top-burritos
+          h2 Top Burritos for the last year
+          ul
+      #right
+        h3 Wat.
+        p This super-important web service tracks my burrito intake.
 
-    h3 Why?
-    p Because Burritos are delicious.
+        h3 Why?
+        p Because Burritos are delicious.
 
-    h3 How?
-    p By tracking foursquare checkins and looking for venues that fall into certain categories. This makes a few assumptions:
-    ul
-      li I checkin every time I eat somewhere
-      li Every time I checkin to a venue that has Mexican or Burrito in it&apos;s categories, I order a Burrito
-      li I do not eat Burritos at home
-    p These assumptions are historically accurate.
+        h3 How?
+        p By tracking foursquare checkins and looking for venues that fall into certain categories. This makes a few assumptions:
+        ul
+          li I checkin every time I eat somewhere
+          li Every time I checkin to a venue that has Mexican or Burrito in it&apos;s categories, I order a Burrito
+          li I do not eat Burritos at home
+        p These assumptions are historically accurate.
 
-    h3 I want to know more!
-    p Then you should probably check out the source code <a href="https://github.com/justincampbell/justincampbell.me/blob/master/app/views/pages/burritos.html.slim">here</a>.
+        h3 I want to know more!
+        p Then you should probably check out the source code <a href="https://github.com/justincampbell/justincampbell.me/blob/master/app/views/pages/burritos.html.slim">here</a>.
 
 sass:
   @import url(http://fonts.googleapis.com/css?family=Quando)
