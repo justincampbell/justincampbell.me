@@ -8,7 +8,10 @@ class ApplicationController < ActionController::Base
   end
 
   def ensure_signed_in
-    redirect_to :sign_in unless signed_in?
+    unless signed_in?
+      session[:destination] ||= request.path
+      redirect_to :sign_in
+    end
   end
 
   def signed_in?

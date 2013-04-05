@@ -12,11 +12,13 @@ describe SessionsController do
 
     context "when already signed in" do
       before :each do
+        session[:destination] = '/abc'
         session[:signed_in] = true
         get :new
       end
 
-      it { should redirect_to(:root) }
+      it { should redirect_to('/abc') }
+      it { expect(session[:destination]).to be_nil }
     end
   end
 
