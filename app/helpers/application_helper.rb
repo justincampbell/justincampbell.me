@@ -14,6 +14,10 @@ module ApplicationHelper
     string.present? ? string : "justincampbell.me"
   end
 
+  def signed_in?
+    !!session[:signed_in]
+  end
+
   def markdown(md, options={})
     redcarpet = Redcarpet::Markdown.new MarkdownRenderer,
       autolink: true,

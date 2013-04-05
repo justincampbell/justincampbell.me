@@ -7,3 +7,7 @@
       til_show_path(thing),
       class: :timestamp,
       title: (thing.created_at || Time.now).iso8601
+    - if signed_in?
+      = link_to "edit",
+        til_edit_path(thing),
+        class: :edit
