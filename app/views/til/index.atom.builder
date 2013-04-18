@@ -5,7 +5,7 @@ atom_feed root_url: til_root_url do |feed|
   @things.each do |thing|
     feed.entry thing, url: til_show_url(thing), id: thing.slug do |entry|
       entry.url til_show_url(thing)
-      entry.title thing.body.split("\n").first.truncate(80)
+      entry.title thing.title
       entry.content markdown(thing.body), type: :html
       entry.updated thing.updated_at.iso8601
 
