@@ -4,9 +4,9 @@ class ResumeController < ApplicationController
     @md = Rails.cache.fetch(md_url) { Faraday.get(md_url).body }
 
     respond_to do |format|
-      format.html     { render :index, :layout => nil }
-      format.markdown { render :text => @md }
-      format.text     { render :text => plaintext(:markdown => @md) }
+      format.html     { render :index, layout: nil }
+      format.markdown { render text: @md }
+      format.text     { render text: plaintext(:markdown => @md) }
     end
   end
 

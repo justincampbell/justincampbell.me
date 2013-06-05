@@ -28,6 +28,16 @@ describe ApplicationHelper do
       end
     end
 
+    context "with an email address" do
+      let(:markdown) { "justin@justincampbell.me" }
+
+      it "does not convert it to a twitter link" do
+        should_not include(
+          "#{klass::TWITTER_URL_PREFIX}"
+        )
+      end
+    end
+
     context "with an instance variable in code" do
       let(:markdown) { "`@ivar`\n\n```rb\n@ivar\n```" }
 

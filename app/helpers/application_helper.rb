@@ -42,10 +42,12 @@ module ApplicationHelper
 
   def link_twitter_usernames(markdown)
     code_block = false
+    last_letter = ""
 
     result = markdown.split("").inject("") { |buffer, letter|
       code_block = !code_block if letter == "`"
-      letter.prepend "twitter:" if not code_block and letter == "@"
+      letter.prepend "twitter:" if not code_block and letter == "@" and last_letter.empty?
+      last_letter = letter
       buffer << letter
     }
 
