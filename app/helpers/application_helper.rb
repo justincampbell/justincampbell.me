@@ -47,7 +47,7 @@ module ApplicationHelper
     result = markdown.split("").inject("") { |buffer, letter|
       code_block = !code_block if letter == "`"
       letter.prepend "twitter:" if not code_block and letter == "@" and last_letter.empty?
-      last_letter = letter
+      last_letter = letter.strip
       buffer << letter
     }
 
