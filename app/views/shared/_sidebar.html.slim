@@ -1,7 +1,7 @@
 #sidebar
   #logo= link_to_unless_current 'J', root_path
   ul#navigation
-    - if availability.present?
+    - unless availability.empty? || current_page?(hire_path)
       li = link_to "Hire", hire_path, class: :highlight
     li = link_to "GitHub", "http://github.com/justincampbell"
     li = link_to "Twitter", "http://twitter.com/justincampbell"
