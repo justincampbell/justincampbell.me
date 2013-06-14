@@ -49,14 +49,16 @@
     <div id="wrapper">
       <div id="formats">
         Also available in
-        <%= link_to "Markdown", resume_path(:format => :md) %> or
-        <%= link_to "Plaintext", resume_path(:format => :txt) %>.</br>
-        View source for
-        <%= link_to "website", "http://github.com/justincampbell/justincampbell.me" %>
-        and
-        <%= link_to "resume", "http://github.com/justincampbell/resume" %>.
+        <%= link_to "Markdown", resume_path(format: :md) %>,
+        <%= link_to "Plaintext", resume_path(format: :txt) %>,
+        or as a
+        <%= link_to "PDF", 'https://s3.amazonaws.com/justincampbell/JustinCampbell.pdf' %>.</br>
+        View source for the
+        <%= link_to "website", 'http://github.com/justincampbell/justincampbell.me' %>
+        or
+        <%= link_to "resume", 'http://github.com/justincampbell/resume' %>.
       </div>
-      <%= markdown @md, :add_header_levels => false %>
+      <%= markdown @md, add_header_levels: false %>
     </div>
   </body>
 </html>
