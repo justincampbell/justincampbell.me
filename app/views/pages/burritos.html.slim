@@ -128,7 +128,7 @@ coffee:
       @name = name
       @count = count
 
-    @top: (size) ->
+    @top: ->
       result = {}
       tuples = []
       for burrito in Burrito.all
@@ -137,7 +137,7 @@ coffee:
       tuples.push [venue, count] for venue, count of result
       tuples = tuples.sort (a, b) ->
         if a[1] < b[1] then 1 else (if a[1] > b[1] then -1 else 0)
-      new Venue tuple[0], tuple[1] for tuple in tuples.slice 0, size
+      new Venue tuple[0], tuple[1] for tuple in tuples
 
     name: @name
     count: @count
@@ -181,7 +181,7 @@ coffee:
     $('#this-years-burritos').html "#{Burrito.all.length} Burritos/year"
 
     # Set the top burritos
-    for venue in Venue.top 5
+    for venue in Venue.top()
       name = venue.name
       count = venue.count
       pluralization = if count > 1 then 's' else ''
