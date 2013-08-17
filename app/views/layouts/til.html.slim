@@ -11,5 +11,6 @@ html
       = render 'shared/sidebar'
       = link_to til_root_path do
         h1 Today, I Learned...
+      p#byline by #{link_to "Justin Campbell", root_path}
       = yield
 
