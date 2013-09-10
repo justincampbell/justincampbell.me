@@ -1,7 +1,9 @@
 class ResumeController < ApplicationController
   def index
     md_url = "https://raw.github.com/justincampbell/resume/master/JustinCampbell.md"
-    @md = Rails.cache.fetch(md_url) { Faraday.get(md_url).body }
+    @md = Rails.cache.fetch(md_url, expires_in: 1.week) {
+      Faraday.get(md_url).body
+    }
 
     respond_to do |format|
       format.html     { render :index, layout: nil }
