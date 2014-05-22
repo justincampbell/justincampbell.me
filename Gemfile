@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.0.0'
 
-gem 'rails'
+gem 'rails', '~> 3.2'
 
 gem 'airbrake'
 gem 'heroku'
