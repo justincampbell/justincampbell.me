@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121013042501) do
+ActiveRecord::Schema.define(:version => 20140919203001) do
 
   create_table "posts", :force => true do |t|
     t.string   "title"
@@ -29,13 +29,6 @@ ActiveRecord::Schema.define(:version => 20121013042501) do
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
     t.string   "image_url"
-  end
-
-  create_table "tils", :force => true do |t|
-    t.text     "body"
-    t.string   "slug"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
   end
 
 end

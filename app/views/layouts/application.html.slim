@@ -4,7 +4,6 @@ html
     title= title
     = stylesheet_link_tag :application
     = tag :meta, name: :viewport, content: 'width=device-width'
-    = auto_discovery_link_tag :atom, "/til.atom", title: "Today, I Learned..."
     = csrf_meta_tags
   body
     = render 'shared/sidebar'
