@@ -1,0 +1,126 @@
+@import bourbon
+@import normalize
+
+@import url(http://fonts.googleapis.com/css?family=Pacifico)
+@import url(http://fonts.googleapis.com/css?family=Quando)
+
+$dark-gray: #333
+$orange: #ff8000
+$white: white
+
+$link-color: $dark-gray
+$link-hover-color: $orange
+$text-color: $dark-gray
+
+@mixin shadow-border($size)
+  box-shadow: 0px 0px 0px $size black
+
+body
+  color: $text-color
+  font: 16pt Quando
+
+a
+  @include transition (all 0.25s ease)
+  color: $link-color
+  text-decoration: none
+  &:hover
+    color: $link-hover-color
+  &.highlight
+    background-color: $link-hover-color
+    color: white
+    padding: 0.2em
+    &:hover
+      background-color: $link-color
+
+#sidebar
+  text-align: center
+  width: 100%
+
+#logo
+  color: $orange
+  font: 72pt Pacifico
+  text-align: right
+  a
+    color: $orange
+
+#navigation
+  display: block
+  font-size: 0.75em
+  list-style-type: none
+  padding: 0
+  li
+    margin: 1em
+    display: inline
+  a
+    @include transition (all 0.25s ease)
+    color: $link-color
+    text-decoration: none
+    &:hover
+      color: $link-hover-color
+    &.highlight
+      background-color: $link-hover-color
+      color: white
+      padding: 0.2em
+      &:hover
+        background-color: $link-color
+  a
+    color: $link-color
+    &:hover
+      color: $link-hover-color
+    &.highlight
+      background-color: $link-hover-color
+      color: white
+      padding: 0.2em
+      &:hover
+        background-color: $link-color
+
+#projects
+  margin: auto
+  padding: 0
+  width: 320px
+
+.project
+  +shadow-border(1px)
+  display: block
+  height: 200px
+  margin: 10px 10px
+  width: 300px
+  a
+    display: table
+    height: 100%
+    width: 100%
+  img
+    width: 100%
+  .name
+    display: table-cell
+    height: 100%
+    text-align: center
+    font: 2em Futura
+    padding: 0.5em
+    vertical-align: middle
+    width: 100%
+
+@media all and (min-width: 481px)
+  #sidebar
+    position: absolute
+    right: 0px
+    text-align: right
+    width: 100px
+
+  #navigation
+    li
+      display: block
+      margin: 0 1em 0.5em 0
+
+  #content
+    float: left
+    padding-right: 100px
+
+  #projects
+    margin-top: 0.5em
+    margin-left: 0.5em
+    width: 100%
+
+  .project
+    float: left
+    margin: 1em
