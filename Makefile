@@ -7,7 +7,7 @@ serve: deps
 	bundle exec middleman
 
 build/: deps
-	time bundle exec middleman build
+	bundle exec middleman build
 
 deps:
 	which bundle || gem install bundler
