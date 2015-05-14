@@ -1,4 +1,7 @@
 ---
+- name: Papers We Love Philadelphia
+  url: http://meetup.com/Papers-We-Love-Philadelphia
+  published_at: 2015-06-02
 - name: Talks
   url: http://lanyrd.com/profile/justincampbell/
   published_at: 2015-03-10 21:25:23.267677000 Z
