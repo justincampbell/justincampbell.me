@@ -1,4 +1,5 @@
+*.tfstate.backup
 .DS_Store
+.terraform/
 /.bundle
 /build
-*.tfstate.backup
