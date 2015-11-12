@@ -13,3 +13,9 @@ end
 configure :development do
   activate :livereload
 end
+
+helpers do
+  def projects
+    data.projects.sort_by(&:date).reverse
+  end
+end
