@@ -1,4 +1,7 @@
 ---
+- name: cacheout
+  url: https://github.com/justincampbell/cacheout
+  published_at: 2015-10-27
 - name: Papers We Love Philadelphia
   url: http://meetup.com/Papers-We-Love-Philadelphia
   published_at: 2015-06-02
