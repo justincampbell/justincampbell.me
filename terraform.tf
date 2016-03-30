@@ -1,4 +1,6 @@
-provider "aws" { region = "us-east-1" }
+provider "aws" {
+  region = "us-east-1"
+}
 
 variable "bucket" {
   default = "justincampbell.me"
@@ -6,14 +8,14 @@ variable "bucket" {
 
 resource "dnsimple_record" "apex" {
   domain = "${var.bucket}"
-  name = ""
-  type = "ALIAS"
-  value = "${aws_s3_bucket.default.website_endpoint}"
+  name   = ""
+  type   = "ALIAS"
+  value  = "${aws_s3_bucket.default.website_endpoint}"
 }
 
 resource "aws_s3_bucket" "default" {
   bucket = "${var.bucket}"
-  acl = "public-read"
+  acl    = "public-read"
   policy = "${template_file.policy.rendered}"
 
   website {
