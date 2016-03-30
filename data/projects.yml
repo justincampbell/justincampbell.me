@@ -1,4 +1,7 @@
 ---
+- name: plop
+  url: https://github.com/justincampbell/plop
+  date: 2016-01-29
 - name: cacheout
   url: https://github.com/justincampbell/cacheout
   date: 2015-10-27
