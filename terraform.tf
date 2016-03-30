@@ -13,6 +13,13 @@ resource "dnsimple_record" "apex" {
   value  = "${aws_s3_bucket.default.website_endpoint}"
 }
 
+resource "dnsimple_record" "www" {
+  domain = "${var.bucket}"
+  name   = "www"
+  type   = "URL"
+  value  = "http://justincampbell.me"
+}
+
 resource "aws_s3_bucket" "default" {
   bucket = "${var.bucket}"
   acl    = "public-read"
