@@ -1,4 +1,7 @@
 ---
+- name: terraform-s3-website
+  url: https://github.com/justincampbell/terraform-s3-website
+  date: 2016-04-05
 - name: plop
   url: https://github.com/justincampbell/plop
   date: 2016-01-29
