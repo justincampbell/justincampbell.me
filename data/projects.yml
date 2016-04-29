@@ -1,4 +1,7 @@
 ---
+- name: Open Pomodoro
+  url: https://github.com/open-pomodoro
+  date: 2016-04-27
 - name: terraform-s3-website
   url: https://github.com/justincampbell/terraform-s3-website
   date: 2016-04-05
