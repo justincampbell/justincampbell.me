@@ -1,4 +1,7 @@
 ---
+- name: timeago
+  url: https://github.com/justincampbell/timeago
+  date: 2016-05-03
 - name: lastpost
   url: https://github.com/justincampbell/lastpost
   date: 2016-04-29
