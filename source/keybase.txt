@@ -1,0 +1,66 @@
+==================================================================
+https://keybase.io/justincampbell
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://justincampbell.me
+  * I am justincampbell (https://keybase.io/justincampbell) on keybase.
+  * I have a public key with fingerprint 05A4 547F 7975 810A B48B  2B3B C74D 3CA2 3245 467E
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "010126922a9eb355646b6e988662a8032e074e6df9b552ee069770c194e6ce6174350a",
+            "fingerprint": "05a4547f7975810ab48b2b3bc74d3ca23245467e",
+            "host": "keybase.io",
+            "key_id": "c74d3ca23245467e",
+            "kid": "010126922a9eb355646b6e988662a8032e074e6df9b552ee069770c194e6ce6174350a",
+            "uid": "329e2ecc67f0aaa0cee581efa7decd00",
+            "username": "justincampbell"
+        },
+        "service": {
+            "hostname": "justincampbell.me",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1471281691,
+    "expire_in": 157680000,
+    "prev": "3fb3b9bd32e04e4054bb741d1e6d17558682f719e154bb5b45179dc58d420ece",
+    "seqno": 4,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+
+owGtUl1IFUEYvde0LIiMSJOkYqEs8Wd27szO7qVSoqJSewjKesjbzu53r6vX3dvd
+1RKxh5Koh6AfiCwiuRFqEVFWZlGa0q8JKSW9JIRFBAXhSz9UNCv11mPzMsx3znfm
+fIfv6OxpgbTgo8qVKbxu/b7g0AceqLr6fUmzxB2zSQo3S3UwdUHcBNeL1FmmFJaQ
+jGSsaBjrGvAQpQpRuAKaqioK1lUUwoAYAcWMapxSDIAUjTFkyJooGqDIjIQo0qVC
+KWrZMUgmkpbt+bJUJ5SwKNMYVWWkc6JyzEPcYMQMGToOYQErDERjjeP6HcIc110o
+thxRE4/IlL1/8P+z74YpuRDWAINhKCyKdF1HBoDwDVGdmWCYCPlEF5K2Xg+CXdvg
+epZt6PUJDvG41FIoCazRMsCP15/nn7ziet9+Iul4juHEBVzjeYmw3+01JXz6HuCR
+P0IRbtmmSFQ0NELStRxbCsuCaXiWrywTJmNVVjS5UIK9CSsJEctnUKaoSBz/G2jk
+/mBRkbrGTT8QAgRRwjkjsimLbGRGqaqoOMpkDWQfoZxQmWmmQVWTYASG79iF3bYj
+hYnwqceEpGvFbN1rSILUMutwMC89EEwLTM9I83ctMGtm1t8FNJZlBto6NjSdO9S/
+9sncku7zvXfKpymjt52zK/tOVF98/qyz6EBOWv6h0NPUjhXvSmpLd5yZl3kp5VRd
+PTrUOX9e3eVNGXhse8ar/ZtJTta3X4+3l098WtS6q7SIevlZ+WXtF5aPfLm3/7FR
+urljYqFzeqJ1kvVMbqUbu+/frPk6OHJtW2ZfzoKTte7drrbUwMGlFeXDvdkzdl5I
+7TvRU4seotwy17vS0/6+n7SUJVt7P8eCb3/O6e/OHtgbz/tx6nUs2vzxVk79kF41
+DOmJ8bFjx8fbbqCu4JHxxdl44MDQy8zqPW9Gr2d/a9tSUHlzVcH0U7lnKuoG19iD
+SnHjg/aCjsGMc6tf/AY=
+=a6Zx
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/justincampbell
+
+==================================================================
