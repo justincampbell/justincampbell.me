@@ -22,3 +22,10 @@ resource "dnsimple_record" "www" {
   type   = "URL"
   value  = "http://${var.domain}"
 }
+
+resource "dnsimple_record" "cloudapp" {
+  domain = "${var.domain}"
+  name   = "c"
+  type   = "CNAME"
+  value  = "proxy.cld.me"
+}
