@@ -1,39 +1,24 @@
-provider "aws" {
-  region = "us-east-1"
-}
-
-variable "bucket" {
+variable "domain" {
   default = "justincampbell.me"
 }
 
+module "terraform-s3-website" {
+  source = "github.com/justincampbell/terraform-s3-website"
+  bucket = "${var.domain}"
+  domain = "${var.domain}"
+  host   = "site"
+}
+
 resource "dnsimple_record" "apex" {
-  domain = "${var.bucket}"
+  domain = "${var.domain}"
   name   = ""
   type   = "ALIAS"
-  value  = "${aws_s3_bucket.default.website_endpoint}"
+  value  = "${module.terraform-s3-website.website_endpoint}"
 }
 
 resource "dnsimple_record" "www" {
-  domain = "${var.bucket}"
+  domain = "${var.domain}"
   name   = "www"
   type   = "URL"
-  value  = "http://justincampbell.me"
-}
-
-resource "aws_s3_bucket" "default" {
-  bucket = "${var.bucket}"
-  acl    = "public-read"
-  policy = "${template_file.policy.rendered}"
-
-  website {
-    index_document = "index.html"
-  }
-}
-
-resource "template_file" "policy" {
-  filename = "policy.json"
-
-  vars {
-    bucket = "${var.bucket}"
-  }
+  value  = "http://${var.domain}"
 }
