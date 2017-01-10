@@ -1,4 +1,7 @@
 ---
+- name: countdown
+  url: https://github.com/justincampbell/countdown
+  date: 2017-01-10
 - name: timeago
   url: https://github.com/justincampbell/timeago
   date: 2016-05-03
