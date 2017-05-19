@@ -1,4 +1,7 @@
 ---
+- name: GoDuration for Ruby
+  url: https://github.com/justincampbell/go_duration_ruby
+  date: 2017-05-19
 - name: countdown
   url: https://github.com/justincampbell/countdown
   date: 2017-01-10
