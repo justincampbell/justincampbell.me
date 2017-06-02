@@ -1,3 +1,10 @@
+terraform {
+  backend "s3" {
+    bucket = "justincampbell"
+    key    = "terraform/justincampbell.me.tfstate"
+  }
+}
+
 variable "domain" {
   default = "justincampbell.me"
 }
