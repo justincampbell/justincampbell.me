@@ -29,7 +29,7 @@
 - name: Papers We Love Philadelphia
   url: http://meetup.com/Papers-We-Love-Philadelphia
   date: 2015-06-02
-- name: HashiCorp Atlas
+- name: HashiCorp Terraform Enterprise
   url: https://atlas.hashicorp.com
   date: 2015-03-30
 - name: Talks
