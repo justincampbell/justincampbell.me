@@ -2,153 +2,177 @@
 - name: Vagrant Cloud
   url: https://app.vagrantup.com
   date: 2017-06-27
+  tags: [rails, ruby, web, work]
 - name: GoDuration for Ruby
   url: https://github.com/justincampbell/go_duration_ruby
   date: 2017-05-19
+  tags: [open-source, ruby]
 - name: countdown
   url: https://github.com/justincampbell/countdown
   date: 2017-01-10
+  tags: [cli, go, open-source]
 - name: timeago
   url: https://github.com/justincampbell/timeago
   date: 2016-05-03
+  tags: [go, open-source]
 - name: lastpost
   url: https://github.com/justincampbell/lastpost
   date: 2016-04-29
+  tags: [cli, go, open-source]
 - name: Open Pomodoro Specification
   url: https://github.com/open-pomodoro
   date: 2016-04-27
+  tags: [open-source]
 - name: terraform-s3-website
   url: https://github.com/justincampbell/terraform-s3-website
   date: 2016-04-05
+  tags: [devops, open-source]
 - name: plop
   url: https://github.com/justincampbell/plop
   date: 2016-01-29
+  tags: [cli, go, open-source]
 - name: cacheout
   url: https://github.com/justincampbell/cacheout
   date: 2015-10-27
+  tags: [cli, go, open-source]
 - name: Papers We Love Philadelphia
   url: http://meetup.com/Papers-We-Love-Philadelphia
   date: 2015-06-02
-- name: HashiCorp Terraform Enterprise
+  tags: [community, learning]
+- name: Terraform Enterprise
   url: https://atlas.hashicorp.com
   date: 2015-03-30
+  tags: [go, rails, ruby, web, work]
 - name: Talks
   url: http://lanyrd.com/profile/justincampbell/
   date: 2015-11-17
   image_url: http://justincampbell.s3.amazonaws.com/talks.png
+  tags: [community, learning]
 - name: anybar.go
   url: https://github.com/justincampbell/anybar
   date: 2015-03-06
-  image_url:
+  tags: [go, open-source]
 - name: CS Book Club
   url: http://csbookclub.com
   date: 2015-03-03
-  image_url:
+  tags: [learning, podcast]
 - name: Kata Seeds
   url: https://github.com/kata-seeds
   date: 2015-02-17
   image_url: https://s3.amazonaws.com/justincampbell/kata-seeds.png
+  tags: [community, learning, open-source]
 - name: zipcode.go
   url: https://github.com/justincampbell/zipcode
   date: 2015-02-11
-  image_url:
+  tags: [cli, go, open-source]
 - name: emoji-weather
   url: https://github.com/justincampbell/emoji-weather
   date: 2014-12-05
-  image_url:
+  tags: [cli, go, open-source]
 - name: Should I Test This?
   url: http://shoulditestthis.com
   date: 2014-11-04
-  image_url:
+  tags: [web]
 - name: Today, I Learned...
   url: http://til.justincampbell.me
   date: 2014-09-19
   image_url: http://justincampbell.s3.amazonaws.com/til.png
+  tags: [learning, web]
 - name: q-queue
   url: https://github.com/justincampbell/q-queue
   date: 2014-08-21
-  image_url:
+  tags: [bash, cli, open-source]
 - name: "tmux \U0001F345pomodoro"
   url: https://github.com/justincampbell/tmux-pomodoro
   date: 2014-07-23
-  image_url:
+  tags: [cli, go, open-source]
 - name: Software as Craft
   url: http://scphilly.org
   date: 2014-07-01
   image_url: http://justincampbell.s3.amazonaws.com/scphilly.png
+  tags: [community, learning]
 - name: Turing-Incomplete
   url: http://turing.cool
   date: 2014-06-11
   image_url: http://justincampbell.s3.amazonaws.com/turing-incomplete.png
+  tags: [community, podcast]
 - name: tp
   url: http://github.com/JustinCampbell/tp
   date: 2014-05-22
   image_url: http://justincampbell.s3.amazonaws.com/tp.png
+  tags: [cli, open-source, ruby]
 - name: tmux-status-bar
   url: https://github.com/justincampbell/tmux-status-bar
   date: 2014-05-15
   image_url: https://s3.amazonaws.com/justincampbell/tmux-status-bar.png
+  tags: [bash, cli, open-source]
 - name: dotmusic
   url: https://github.com/justincampbell/dotmusic
   date: 2014-04-23
-  image_url:
+  tags: [bash, cli, open-source]
 - name: rr repeat/retry
   url: https://github.com/justincampbell/rr
   date: 2014-04-15
-  image_url:
+  tags: [bash, cli, open-source]
 - name: use
   url: https://github.com/justincampbell/use
   date: 2014-03-22
-  image_url:
+  tags: [bash, cli, open-source]
 - name: Philly Code and Coffee
   url: http://www.meetup.com/philly-code-and-coffee/
   date: 2014-03-19
-  image_url:
+  tags: [community, learning]
 - name: motherbrain
   url: https://github.com/RiotGames/motherbrain
   date: 2014-02-18
-  image_url:
+  tags: [chef, devops, open-source, ruby, work]
 - name: chef-drone
   url: https://github.com/justincampbell/chef-drone
   date: 2014-02-14
-  image_url:
+  tags: [chef, devops, open-source]
 - name: Generative
   url: https://github.com/justincampbell/generative
   date: 2013-11-21
-  image_url:
+  tags: [open-source, ruby]
 - name: Whipped Cream
   url: https://github.com/justincampbell/whipped-cream
   date: 2013-10-09
   image_url: https://s3.amazonaws.com/justincampbell/whipped-cream.png
+  tags: [open-source, ruby]
 - name: URL Shorteners
   url: https://github.com/justincampbell/url-shorteners
   date: 2013-05-10
-  image_url:
+  tags: [learning, open-source]
 - name: eighties.vim
   url: https://github.com/justincampbell/vim-eighties
   date: 2013-04-01
-  image_url:
+  tags: [open-source, vim]
 - name: Berkshelf
   url: http://berkshelf.com
   date: 2013-03-25
   image_url: http://justincampbell.s3.amazonaws.com/berkshelf.png
+  tags: [devops, open-source, ruby, work]
 - name: Guard::Cane
   url: https://github.com/guard/guard-cane
   date: 2013-02-07
-  image_url:
+  tags: [open-source, ruby]
 - name: speclj-tmux
   url: https://github.com/justincampbell/speclj-tmux
   date: 2013-01-03
   image_url: http://justincampbell.s3.amazonaws.com/speclj-tmux.png
+  tags: [open-source, clojure]
 - name: '#RubyFriends'
   url: http://rubyfriends.com
   date: 2012-11-01
   image_url: https://s3.amazonaws.com/justincampbell/rubyfriends.png
+  tags: [community, ruby]
 - name: Dividata for iOS
   url: http://bit.ly/dividata-ios
   date: 2012-06-15
   image_url: http://justincampbell.s3.amazonaws.com/dividata-ios.png
+  tags: [ios, ruby, web]
 - name: Dividata
   url: http://dividata.com
   date: 2012-03-25
   image_url: http://justincampbell.s3.amazonaws.com/dividata.png
+  tags: [rails, ruby, web]

@@ -1,6 +1,15 @@
+ul#tags
+  li#tag-all.tag.active
+    a href="#" onclick="filterProjects()" all
+  - tags.each do |tag, count|
+    li.tag id="tag-#{tag}"
+      a href="##{tag}" onclick="filterProjects('#{tag}')"
+        = tag
+        span.count
+          = count
 ul#projects
   - projects.each do |project|
-    li.project
+    li.project data-tags=project.tags.join(' ')
       = link_to project.url do
         - if project.image_url
           = image_tag project.image_url, title: project.name
