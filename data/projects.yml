@@ -64,7 +64,7 @@
 - name: zipcode.go
   url: https://github.com/justincampbell/zipcode
   date: 2015-02-11
-  tags: [cli, go, open-source]
+  tags: [go, open-source]
 - name: emoji-weather
   url: https://github.com/justincampbell/emoji-weather
   date: 2014-12-05
