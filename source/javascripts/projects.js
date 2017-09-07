@@ -35,9 +35,9 @@ var setActiveTag = function(tag) {
     tags[i].classList.remove("active");
   }
 
-  var activeTag = document.getElementById(tag);
+  var activeTag = document.getElementById("tag-" + tag);
   if (activeTag === null) {
-    activeTag = document.getElementById("all");
+    activeTag = document.getElementById("tag-all");
   }
   activeTag.classList.add("active");
 }

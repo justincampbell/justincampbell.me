@@ -1,8 +1,8 @@
 ul#tags
-  li#all.tag.active
+  li#tag-all.tag.active
     a href="#" onclick="filterProjects()" all
   - tags.each do |tag, count|
-    li.tag id=tag
+    li.tag id="tag-#{tag}"
       a href="##{tag}" onclick="filterProjects('#{tag}')"
         = tag
         span.count
