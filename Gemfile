@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'middleman'
+gem 'middleman', '~> 3.0'
 
 gem 'bourbon'
 gem 'middleman-google-analytics'
