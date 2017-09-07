@@ -88,6 +88,30 @@ a
       &:hover
         background-color: $link-color
 
+ul#tags
+  padding: 0.5em
+  font-size: 0.75em
+  list-style-type: none
+
+  li.tag
+    border: 1px solid black
+    display: inline-block
+    margin: 0.25em
+    padding: 0.25em
+
+    &.active
+      a
+        color: $orange
+
+    span.count
+      color: lighten($dark-gray, 25%)
+      font-size: 0.75em
+
+      &::before
+        content: " ("
+      &::after
+        content: ")"
+
 #projects
   margin: auto
   padding: 0

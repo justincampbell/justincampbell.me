@@ -18,4 +18,13 @@ helpers do
   def projects
     data.projects.sort_by(&:date).reverse
   end
+
+  def tags
+    data
+      .projects
+      .map(&:tags)
+      .flatten
+      .inject(Hash.new(0)) { |hash, tag| hash[tag] += 1; hash }
+      .sort
+  end
 end
