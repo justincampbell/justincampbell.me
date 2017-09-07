@@ -14,7 +14,7 @@
 - name: lastpost
   url: https://github.com/justincampbell/lastpost
   date: 2016-04-29
-- name: Open Pomodoro
+- name: Open Pomodoro Specification
   url: https://github.com/open-pomodoro
   date: 2016-04-27
 - name: terraform-s3-website
