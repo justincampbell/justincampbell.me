@@ -42,7 +42,7 @@
 - name: Terraform Enterprise
   url: https://atlas.hashicorp.com
   date: 2015-03-30
-  tags: [go, rails, ruby, web, work]
+  tags: [devops, go, rails, ruby, web, work]
 - name: Talks
   url: http://lanyrd.com/profile/justincampbell/
   date: 2015-11-17
