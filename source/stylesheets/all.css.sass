@@ -5,6 +5,7 @@
 @import url(http://fonts.googleapis.com/css?family=Quando)
 
 $dark-gray: #333
+$gray: #999
 $orange: #ff8000
 $white: white
 
@@ -15,7 +16,7 @@ $text-color: $dark-gray
 $rainbow-width: 250px
 
 @mixin shadow-border($size)
-  box-shadow: 0px 0px 0px $size black
+  box-shadow: 0px 0px 0px $size $dark-gray
 
 @keyframes slide-right
   from
@@ -89,14 +90,14 @@ a
         background-color: $link-color
 
 ul#tags
-  padding: 0.5em
-  font-size: 0.75em
+  margin: 2em 2em 0 2em
+  padding: 0
+  font-size: golden-ratio(1em, -1)
   list-style-type: none
+  text-align: center
 
   li.tag
-    border: 1px solid black
     display: inline-block
-    margin: 0.25em
     padding: 0.25em
 
     &.active
@@ -104,7 +105,7 @@ ul#tags
         color: $orange
 
     span.count
-      color: lighten($dark-gray, 25%)
+      color: $gray
       font-size: 0.75em
 
       &::before
@@ -133,7 +134,7 @@ ul#tags
     display: table-cell
     height: 100%
     text-align: center
-    font: 2em Futura
+    font: golden-ratio(1em, 1) Futura
     padding: 0.5em
     vertical-align: middle
     width: 100%
@@ -154,8 +155,10 @@ ul#tags
     float: left
     padding-right: 100px
 
+  ul#tags
+    text-align: left
+
   #projects
-    margin-top: 0.5em
     margin-left: 0.5em
     width: 100%
 
