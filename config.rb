@@ -15,6 +15,22 @@ configure :development do
 end
 
 helpers do
+  def github_url
+    "https://github.com/justincampbell"
+  end
+
+  def schedule_url
+    "http://calendly.com/justincampbell/meet/"
+  end
+
+  def source_url
+    "https://github.com/justincampbell/justincampbell.me"
+  end
+
+  def twitter_url
+    "http://twitter.com/justincampbell"
+  end
+
   def projects
     data.projects.sort_by(&:date).reverse
   end
