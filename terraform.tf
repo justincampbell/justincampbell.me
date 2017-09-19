@@ -5,33 +5,32 @@ terraform {
   }
 }
 
-variable "domain" {
-  default = "justincampbell.me"
+locals {
+  domain = "justincampbell.me"
 }
 
-module "terraform-s3-website" {
-  source = "github.com/justincampbell/terraform-s3-website"
-  bucket = "${var.domain}"
-  domain = "${var.domain}"
-  host   = "site"
+module "staticsite" {
+  source = "justincampbell/staticsite/aws"
+  bucket = "${local.domain}"
+  domain = "${local.domain}"
 }
 
 resource "dnsimple_record" "apex" {
-  domain = "${var.domain}"
+  domain = "${local.domain}"
   name   = ""
   type   = "ALIAS"
-  value  = "${module.terraform-s3-website.website_endpoint}"
+  value  = "${module.staticsite.website_endpoint}"
 }
 
 resource "dnsimple_record" "www" {
-  domain = "${var.domain}"
+  domain = "${local.domain}"
   name   = "www"
   type   = "URL"
-  value  = "http://${var.domain}"
+  value  = "http://${local.domain}"
 }
 
 resource "dnsimple_record" "cloudapp" {
-  domain = "${var.domain}"
+  domain = "${local.domain}"
   name   = "c"
   type   = "CNAME"
   value  = "proxy.cld.me"
