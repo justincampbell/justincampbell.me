@@ -3,10 +3,14 @@
   url: https://app.vagrantup.com
   date: 2017-06-27
   tags: [rails, ruby, web, work]
-- name: GoDuration for Ruby
+- name: GoDuration<br><small>for Ruby</small>
   url: https://github.com/justincampbell/go_duration_ruby
   date: 2017-05-19
   tags: [open-source, ruby]
+- name: Terraform Enterprise
+  url: https://app.terraform.io
+  date: 2017-03-15
+  tags: [devops, go, rails, ruby, web, work]
 - name: countdown
   url: https://github.com/justincampbell/countdown
   date: 2017-01-10
@@ -19,11 +23,11 @@
   url: https://github.com/justincampbell/lastpost
   date: 2016-04-29
   tags: [cli, go, open-source]
-- name: Open Pomodoro Specification
+- name: Open Pomodoro<br>Specification
   url: https://github.com/open-pomodoro
   date: 2016-04-27
   tags: [open-source]
-- name: staticsite Terraform Module
+- name: staticsite<br><small>Terraform Module</small>
   url: https://github.com/justincampbell/terraform-s3-website
   date: 2016-04-05
   tags: [devops, open-source]
@@ -39,7 +43,7 @@
   url: http://meetup.com/Papers-We-Love-Philadelphia
   date: 2015-06-02
   tags: [community, learning]
-- name: Terraform Enterprise
+- name: HashiCorp<br>Atlas
   url: https://atlas.hashicorp.com
   date: 2015-03-30
   tags: [devops, go, rails, ruby, web, work]
