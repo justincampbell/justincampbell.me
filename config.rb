@@ -1,6 +1,8 @@
 set :css_dir, 'stylesheets'
 set :images_dir, 'images'
 
+page 'error.html', layout: false
+
 activate :google_analytics do |ga|
   ga.tracking_id = 'UA-5973800-7'
 end
