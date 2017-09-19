@@ -23,7 +23,7 @@
   url: https://github.com/open-pomodoro
   date: 2016-04-27
   tags: [open-source]
-- name: terraform-s3-website
+- name: staticsite Terraform Module
   url: https://github.com/justincampbell/terraform-s3-website
   date: 2016-04-05
   tags: [devops, open-source]
