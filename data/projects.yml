@@ -1,4 +1,8 @@
 ---
+- name: Progress Printer
+  url: https://github.com/justincampbell/progress_printer
+  date: 2017-10-13
+  tags: [open-source, ruby]
 - name: Vagrant Cloud
   url: https://app.vagrantup.com
   date: 2017-06-27
