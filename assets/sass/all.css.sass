@@ -1,5 +1,4 @@
-@import bourbon
-@import normalize
+@import "normalize.css"
 
 @import url(http://fonts.googleapis.com/css?family=Pacifico)
 @import url(http://fonts.googleapis.com/css?family=Quando)
@@ -30,7 +29,7 @@ body
   font: 16pt Quando
 
 a
-  @include transition (all 0.25s ease)
+  transition: all 0.25s ease
   color: $link-color
   text-decoration: none
   &:hover
@@ -62,13 +61,13 @@ a
     display: inline
     margin: 1em
   a
-    @include transition (all 0.25s ease)
+    transition: all 0.25s ease
     border-radius: 0.2em
     color: $link-color
     padding: 0.2em
     text-decoration: none
     &:hover
-      @include linear-gradient(to right,red,orange,yellow,green,blue,indigo,violet,red)
+      background: linear-gradient(to right,red,orange,yellow,green,blue,indigo,violet,red)
       animation: slide-right 1s linear infinite
       background-size: $rainbow-width
       color: $white !important
@@ -92,7 +91,7 @@ a
 ul#tags
   margin: 2em 2em 0 2em
   padding: 0
-  font-size: golden-ratio(1em, -1)
+  font-size: 0.618em
   list-style-type: none
   text-align: center
 
@@ -119,7 +118,7 @@ ul#tags
   width: 320px
 
 .project
-  +shadow-border(1px)
+  box-shadow: 0px 0px 0px 1px #333
   display: block
   height: 200px
   margin: 10px 10px
@@ -134,7 +133,7 @@ ul#tags
     display: table-cell
     height: 100%
     text-align: center
-    font: golden-ratio(1em, 1) Futura
+    font: 1.618em Futura
     padding: 0.5em
     vertical-align: middle
     width: 100%
