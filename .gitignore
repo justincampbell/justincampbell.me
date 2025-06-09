@@ -1,5 +1,2 @@
-*.tfstate.backup
-.DS_Store
-.terraform/
-/.bundle
-/build
+.hugo_build.lock
+public/
