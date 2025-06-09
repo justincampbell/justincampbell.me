@@ -1,4 +1,12 @@
 ---
+- name: GitHub Copilot
+  url: https://github.com/features/copilot
+  date: 2023-09-01
+  tags: [ai, go, rails, ruby, web, work]
+- name: Terraform Registry
+  url: https://registry.terraform.io
+  date: 2018-01-01
+  tags: [devops, ember, go, javascript, web, work]
 - name: Progress Printer
   url: https://github.com/justincampbell/progress_printer
   date: 2017-10-13
