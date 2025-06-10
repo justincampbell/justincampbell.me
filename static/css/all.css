@@ -1,6 +1,20 @@
 @import url("normalize.css");
-@import url("https://fonts.googleapis.com/css?family=Pacifico");
-@import url("https://fonts.googleapis.com/css?family=Quando");
+
+@font-face {
+  font-family: 'Pacifico';
+  src: url('/fonts/Pacifico.ttf') format('truetype');
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Quando';
+  src: url('/fonts/Quando-Regular.ttf') format('truetype');
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}
 
 :root {
   --dark-gray: #333;
