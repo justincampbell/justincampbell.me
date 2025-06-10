@@ -1,3 +1,11 @@
+document.addEventListener("DOMContentLoaded", function(event) {
+  var hash = window.location.hash;
+
+  if (hash !== "") {
+    filterProjects(hash.slice(1));
+  }
+});
+
 var filterProjects = function(tag) {
   setActiveTag(tag);
 

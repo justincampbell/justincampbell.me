@@ -1,0 +1,13 @@
+baseURL: "https://justincampbell.me"
+languageCode: "en-us"
+title: "Justin Campbell"
+
+params:
+  github_url: "https://github.com/justincampbell"
+  schedule_url: "http://calendly.com/justincampbell/meet/"
+  source_url: "https://github.com/justincampbell/justincampbell.me"
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true

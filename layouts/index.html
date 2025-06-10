@@ -1,0 +1,36 @@
+{{ define "main" }}
+<ul id="tags">
+  <li id="tag-all" class="tag active">
+    <a href="#" onclick="filterProjects()">all</a>
+  </li>
+  {{ $tags := dict }}
+  {{ range .Site.Data.projects }}
+    {{ range .tags }}
+      {{ $count := index $tags . | default 0 }}
+      {{ $tags = merge $tags (dict . (add $count 1)) }}
+    {{ end }}
+  {{ end }}
+  {{ range $tag, $count := $tags }}
+    <li class="tag" id="tag-{{ $tag }}">
+      <a href="#{{ $tag }}" onclick="filterProjects('{{ $tag }}')">
+        {{ $tag }}
+        <span class="count">{{ $count }}</span>
+      </a>
+    </li>
+  {{ end }}
+</ul>
+
+<ul id="projects">
+  {{ range sort .Site.Data.projects "date" "desc" }}
+    <li class="project" data-tags="{{ delimit .tags " " }}">
+      <a href="{{ .url }}">
+        {{ if .image_url }}
+          <img src="{{ .image_url }}" title="{{ .name }}" alt="{{ .name }}">
+        {{ else }}
+          <span class="name">{{ .name | safeHTML }}</span>
+        {{ end }}
+      </a>
+    </li>
+  {{ end }}
+</ul>
+{{ end }}
