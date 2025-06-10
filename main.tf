@@ -29,34 +29,32 @@ variable "github_username" {
   default = "justincampbell"
 }
 
+data "http" "github_meta" {
+  url = "https://api.github.com/meta"
+}
+
+locals {
+  github_meta = jsondecode(data.http.github_meta.response_body)
+  pages_ipv4  = [for ip in local.github_meta.pages : split("/", ip)[0] if endswith(ip, "/32")]
+  pages_ipv6  = [for ip in local.github_meta.pages : split("/", ip)[0] if endswith(ip, "/128")]
+}
+
 resource "dnsimple_zone_record" "apex_a" {
-  count     = 4
+  count     = length(local.pages_ipv4)
   zone_name = var.domain
   name      = ""
   type      = "A"
   ttl       = 3600
-
-  value = [
-    "185.199.108.153",
-    "185.199.109.153",
-    "185.199.110.153",
-    "185.199.111.153"
-  ][count.index]
+  value     = local.pages_ipv4[count.index]
 }
 
 resource "dnsimple_zone_record" "apex_aaaa" {
-  count     = 4
+  count     = length(local.pages_ipv6)
   zone_name = var.domain
   name      = ""
   type      = "AAAA"
   ttl       = 3600
-
-  value = [
-    "2606:50c0:8000::153",
-    "2606:50c0:8001::153",
-    "2606:50c0:8002::153",
-    "2606:50c0:8003::153"
-  ][count.index]
+  value     = local.pages_ipv6[count.index]
 }
 
 resource "dnsimple_zone_record" "www_cname" {
