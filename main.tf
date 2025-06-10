@@ -35,7 +35,7 @@ data "http" "github_meta" {
 
 locals {
   github_meta = jsondecode(data.http.github_meta.response_body)
-  pages_ipv4  = [for ip in local.github_meta.pages : split("/", ip)[0] if endswith(ip, "/32")]
+  pages_ipv4  = [for ip in local.github_meta.pages : split("/", ip)[0] if endswith(ip, "/32") && !startswith(ip, "192.")]
   pages_ipv6  = [for ip in local.github_meta.pages : split("/", ip)[0] if endswith(ip, "/128")]
 }
 
