@@ -62,7 +62,7 @@
 - name: Talks
   url: http://lanyrd.com/profile/justincampbell/
   date: 2015-11-17
-  image_url: http://justincampbell.s3.amazonaws.com/talks.png
+  image_url: https://justincampbell.s3.amazonaws.com/talks.png
   tags: [community, learning]
 - name: anybar.go
   url: https://github.com/justincampbell/anybar
@@ -92,7 +92,7 @@
 - name: Today, I Learned...
   url: http://til.justincampbell.me
   date: 2014-09-19
-  image_url: http://justincampbell.s3.amazonaws.com/til.png
+  image_url: https://justincampbell.s3.amazonaws.com/til.png
   tags: [learning, web]
 - name: q-queue
   url: https://github.com/justincampbell/q-queue
@@ -105,17 +105,17 @@
 - name: Software as Craft
   url: http://scphilly.org
   date: 2014-07-01
-  image_url: http://justincampbell.s3.amazonaws.com/scphilly.png
+  image_url: https://justincampbell.s3.amazonaws.com/scphilly.png
   tags: [community, learning]
 - name: Turing-Incomplete
   url: http://turing.cool
   date: 2014-06-11
-  image_url: http://justincampbell.s3.amazonaws.com/turing-incomplete.png
+  image_url: https://justincampbell.s3.amazonaws.com/turing-incomplete.png
   tags: [community, podcast]
 - name: tp
   url: http://github.com/JustinCampbell/tp
   date: 2014-05-22
-  image_url: http://justincampbell.s3.amazonaws.com/tp.png
+  image_url: https://justincampbell.s3.amazonaws.com/tp.png
   tags: [cli, open-source, ruby]
 - name: tmux-status-bar
   url: https://github.com/justincampbell/tmux-status-bar
@@ -166,7 +166,7 @@
 - name: Berkshelf
   url: http://berkshelf.com
   date: 2013-03-25
-  image_url: http://justincampbell.s3.amazonaws.com/berkshelf.png
+  image_url: https://justincampbell.s3.amazonaws.com/berkshelf.png
   tags: [devops, open-source, ruby, work]
 - name: Guard::Cane
   url: https://github.com/guard/guard-cane
@@ -175,7 +175,7 @@
 - name: speclj-tmux
   url: https://github.com/justincampbell/speclj-tmux
   date: 2013-01-03
-  image_url: http://justincampbell.s3.amazonaws.com/speclj-tmux.png
+  image_url: https://justincampbell.s3.amazonaws.com/speclj-tmux.png
   tags: [open-source, clojure]
 - name: '#RubyFriends'
   url: http://rubyfriends.com
@@ -185,10 +185,10 @@
 - name: Dividata for iOS
   url: http://bit.ly/dividata-ios
   date: 2012-06-15
-  image_url: http://justincampbell.s3.amazonaws.com/dividata-ios.png
+  image_url: https://justincampbell.s3.amazonaws.com/dividata-ios.png
   tags: [ios, ruby, web]
 - name: Dividata
   url: http://dividata.com
   date: 2012-03-25
-  image_url: http://justincampbell.s3.amazonaws.com/dividata.png
+  image_url: https://justincampbell.s3.amazonaws.com/dividata.png
   tags: [rails, ruby, web]
