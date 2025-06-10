@@ -1,0 +1,225 @@
+@import url("normalize.css");
+@import url("http://fonts.googleapis.com/css?family=Pacifico");
+@import url("http://fonts.googleapis.com/css?family=Quando");
+
+:root {
+  --dark-gray: #333;
+  --gray: #999;
+  --orange: #ff8000;
+  --white: white;
+  --link-color: var(--dark-gray);
+  --link-hover-color: var(--orange);
+  --text-color: var(--dark-gray);
+  --rainbow-width: 250px;
+}
+
+@keyframes slide-right {
+  from {
+    background-position-x: 0px;
+  }
+  to {
+    background-position-x: var(--rainbow-width);
+  }
+}
+
+body {
+  color: var(--text-color);
+  font: 16pt Quando;
+}
+
+a {
+  transition: all 0.25s ease;
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--link-hover-color);
+}
+
+a.highlight {
+  background-color: var(--link-hover-color);
+  color: white;
+  padding: 0.2em;
+}
+
+a.highlight:hover {
+  background-color: var(--link-color);
+}
+
+#sidebar {
+  text-align: center;
+  width: 100%;
+}
+
+#logo {
+  color: var(--orange);
+  font: 72pt Pacifico;
+  text-align: right;
+}
+
+#logo a {
+  color: var(--orange);
+}
+
+#navigation {
+  display: block;
+  font-size: 0.75em;
+  list-style-type: none;
+  padding: 0;
+}
+
+#navigation li {
+  display: inline;
+  margin: 1em;
+}
+
+#navigation a {
+  transition: all 0.25s ease;
+  border-radius: 0.2em;
+  color: var(--link-color);
+  padding: 0.2em;
+  text-decoration: none;
+}
+
+#navigation a:hover {
+  background: linear-gradient(to right,red,orange,yellow,green,blue,indigo,violet,red);
+  animation: slide-right 1s linear infinite;
+  background-size: var(--rainbow-width);
+  color: var(--white) !important;
+}
+
+#navigation a.highlight {
+  background-color: var(--link-hover-color);
+  color: var(--white);
+  padding: 0.2em;
+}
+
+#navigation a.highlight:hover {
+  background-color: var(--link-color);
+}
+
+ul#tags {
+  margin: 2em 2em 0 2em;
+  padding: 0;
+  font-size: 0.618em;
+  list-style-type: none;
+  text-align: center;
+}
+
+ul#tags li.tag {
+  display: inline-block;
+  padding: 0.25em;
+}
+
+ul#tags li.tag.active a {
+  color: var(--orange);
+}
+
+ul#tags span.count {
+  color: var(--gray);
+  font-size: 0.75em;
+}
+
+ul#tags span.count::before {
+  content: " (";
+}
+
+ul#tags span.count::after {
+  content: ")";
+}
+
+#projects {
+  margin: auto;
+  padding: 0;
+  width: 320px;
+}
+
+.project {
+  box-shadow: 0px 0px 0px 1px #333;
+  display: block;
+  height: 200px;
+  margin: 10px 10px;
+  width: 300px;
+}
+
+.project a {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+.project img {
+  width: 100%;
+}
+
+.project .name {
+  display: table-cell;
+  height: 100%;
+  text-align: center;
+  font: 1.618em Futura;
+  padding: 0.5em;
+  vertical-align: middle;
+  width: 100%;
+}
+
+ul.nav {
+  display: inline-block;
+  padding: 0;
+}
+
+ul.nav li {
+  border: 1pt solid var(--dark-gray);
+  border-radius: 0.2em;
+  display: inline;
+  padding: 0.25em;
+  margin: 0.5em;
+}
+
+body.error {
+  text-align: center;
+}
+
+body.error h1 {
+  color: var(--orange);
+  font: 72pt Pacifico;
+}
+
+body.error #error {
+  background: var(--orange);
+  color: var(--white);
+  padding: 1em;
+}
+
+@media all and (min-width: 481px) {
+  #sidebar {
+    position: absolute;
+    right: 0px;
+    text-align: right;
+    width: 100px;
+  }
+
+  #navigation li {
+    display: block;
+    margin: 0 1em 0.5em 0;
+  }
+
+  #content {
+    float: left;
+    padding-right: 100px;
+  }
+
+  ul#tags {
+    text-align: left;
+  }
+
+  #projects {
+    margin-left: 0.5em;
+    width: 100%;
+  }
+
+  .project {
+    float: left;
+    margin: 1em;
+  }
+}
