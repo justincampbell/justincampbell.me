@@ -24,8 +24,8 @@
   {{ range sort .Site.Data.projects "date" "desc" }}
     <li class="project" data-tags="{{ delimit .tags " " }}">
       <a href="{{ .url }}">
-        {{ if .image_url }}
-          <img src="{{ .image_url }}" title="{{ .name }}" alt="{{ .name }}">
+        {{ if .image }}
+          <img src="{{ .image }}" title="{{ .name }}" alt="{{ .name }}">
         {{ else }}
           <span class="name">{{ .name | safeHTML }}</span>
         {{ end }}
