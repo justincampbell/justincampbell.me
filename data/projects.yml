@@ -3,6 +3,10 @@
   url: https://github.com/features/copilot
   date: 2023-09-01
   tags: [ai, go, rails, ruby, web, work]
+- name: VTS Marketplace
+  url: https://marketplace.vts.com/search/new_york_city
+  date: 2021-12-01
+  tags: [javascript, rails, react, ruby, web, work]
 - name: Terraform Registry
   url: https://registry.terraform.io
   date: 2018-01-01
