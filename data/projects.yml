@@ -52,7 +52,7 @@
   date: 2015-10-27
   tags: [cli, go, open-source]
 - name: Papers We Love Philadelphia
-  url: http://meetup.com/Papers-We-Love-Philadelphia
+  url: https://meetup.com/Papers-We-Love-Philadelphia
   date: 2015-06-02
   tags: [community, learning]
 - name: HashiCorp<br>Atlas
@@ -60,7 +60,7 @@
   date: 2015-03-30
   tags: [devops, go, rails, ruby, web, work]
 - name: Talks
-  url: http://lanyrd.com/profile/justincampbell/
+  url: https://lanyrd.com/profile/justincampbell/
   date: 2015-11-17
   image_url: https://justincampbell.s3.amazonaws.com/talks.png
   tags: [community, learning]
@@ -113,7 +113,7 @@
   image_url: https://justincampbell.s3.amazonaws.com/turing-incomplete.png
   tags: [community, podcast]
 - name: tp
-  url: http://github.com/JustinCampbell/tp
+  url: https://github.com/JustinCampbell/tp
   date: 2014-05-22
   image_url: https://justincampbell.s3.amazonaws.com/tp.png
   tags: [cli, open-source, ruby]
@@ -135,7 +135,7 @@
   date: 2014-03-22
   tags: [bash, cli, open-source]
 - name: Philly Code and Coffee
-  url: http://www.meetup.com/philly-code-and-coffee/
+  url: https://www.meetup.com/philly-code-and-coffee/
   date: 2014-03-19
   tags: [community, learning]
 - name: motherbrain
@@ -164,7 +164,7 @@
   date: 2013-04-01
   tags: [open-source, vim]
 - name: Berkshelf
-  url: http://berkshelf.com
+  url: https://berkshelf.com
   date: 2013-03-25
   image_url: https://justincampbell.s3.amazonaws.com/berkshelf.png
   tags: [devops, open-source, ruby, work]
@@ -183,12 +183,12 @@
   image_url: https://s3.amazonaws.com/justincampbell/rubyfriends.png
   tags: [community, ruby]
 - name: Dividata for iOS
-  url: http://bit.ly/dividata-ios
+  url: https://bit.ly/dividata-ios
   date: 2012-06-15
   image_url: https://justincampbell.s3.amazonaws.com/dividata-ios.png
   tags: [ios, ruby, web]
 - name: Dividata
-  url: http://dividata.com
+  url: https://dividata.com
   date: 2012-03-25
   image_url: https://justincampbell.s3.amazonaws.com/dividata.png
   tags: [rails, ruby, web]
