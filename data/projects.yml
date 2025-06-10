@@ -2,7 +2,7 @@
 - name: GitHub Copilot
   url: https://github.com/features/copilot
   date: 2023-09-01
-  tags: [ai, go, rails, ruby, web, work]
+  tags: [ai, go, javascript, rails, react, ruby, web, work]
 - name: VTS Marketplace
   url: https://marketplace.vts.com/search/new_york_city
   date: 2021-12-01
@@ -26,7 +26,7 @@
 - name: Terraform Enterprise
   url: https://app.terraform.io
   date: 2017-03-15
-  tags: [devops, go, rails, ruby, web, work]
+  tags: [devops, go, ember, javascript, rails, ruby, web, work]
 - name: countdown
   url: https://github.com/justincampbell/countdown
   date: 2017-01-10
