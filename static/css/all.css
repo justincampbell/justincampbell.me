@@ -17,14 +17,28 @@
 }
 
 :root {
-  --dark-gray: #333;
-  --gray: #999;
   --orange: #ff8000;
-  --white: white;
-  --link-color: var(--dark-gray);
+
+  --accent-color: var(--orange);
   --link-hover-color: var(--orange);
-  --text-color: var(--dark-gray);
+  --muted-color: #999;
   --rainbow-width: 250px;
+
+  --background-color: white;
+  --border-color: #333;
+  --link-color: #333;
+  --surface-color: white;
+  --text-color: #333;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #1a1a1a;
+    --border-color: #555;
+    --link-color: #e0e0e0;
+    --surface-color: #1a1a1a;
+    --text-color: #e0e0e0;
+  }
 }
 
 @keyframes slide-right {
@@ -37,6 +51,7 @@
 }
 
 body {
+  background-color: var(--background-color);
   color: var(--text-color);
   font: 16pt Quando;
 }
@@ -53,7 +68,7 @@ a:hover {
 
 a.highlight {
   background-color: var(--link-hover-color);
-  color: white;
+  color: var(--background-color);
   padding: 0.2em;
 }
 
@@ -67,7 +82,7 @@ a.highlight:hover {
 }
 
 #logo {
-  color: var(--orange);
+  color: var(--accent-color);
   font: 72pt Pacifico;
   text-align: right;
 }
@@ -131,7 +146,7 @@ ul#tags li.tag.active a {
 }
 
 ul#tags span.count {
-  color: var(--gray);
+  color: var(--muted-color);
   font-size: 0.75em;
 }
 
@@ -150,7 +165,7 @@ ul#tags span.count::after {
 }
 
 .project {
-  box-shadow: 0px 0px 0px 1px #333;
+  box-shadow: 0px 0px 0px 1px var(--border-color);
   display: block;
   height: 200px;
   margin: 10px 10px;
@@ -183,7 +198,7 @@ ul.nav {
 }
 
 ul.nav li {
-  border: 1pt solid var(--dark-gray);
+  border: 1pt solid var(--border-color);
   border-radius: 0.2em;
   display: inline;
   padding: 0.25em;
@@ -195,13 +210,13 @@ body.error {
 }
 
 body.error h1 {
-  color: var(--orange);
+  color: var(--accent-color);
   font: 72pt Pacifico;
 }
 
 body.error #error {
-  background: var(--orange);
-  color: var(--white);
+  background: var(--accent-color);
+  color: var(--background-color);
   padding: 1em;
 }
 
