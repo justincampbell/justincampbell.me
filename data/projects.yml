@@ -66,7 +66,7 @@
 - name: Talks
   url: https://lanyrd.com/profile/justincampbell/
   date: 2015-11-17
-  image_url: https://justincampbell.s3.amazonaws.com/talks.png
+  image: /images/talks.png
   tags: [community, learning]
 - name: anybar.go
   url: https://github.com/justincampbell/anybar
@@ -79,7 +79,7 @@
 - name: Kata Seeds
   url: https://github.com/kata-seeds
   date: 2015-02-17
-  image_url: https://s3.amazonaws.com/justincampbell/kata-seeds.png
+  image: /images/kata-seeds.png
   tags: [community, learning, open-source]
 - name: zipcode.go
   url: https://github.com/justincampbell/zipcode
@@ -96,7 +96,7 @@
 - name: Today, I Learned...
   url: http://til.justincampbell.me
   date: 2014-09-19
-  image_url: https://justincampbell.s3.amazonaws.com/til.png
+  image: /images/til.png
   tags: [learning, web]
 - name: q-queue
   url: https://github.com/justincampbell/q-queue
@@ -109,22 +109,22 @@
 - name: Software as Craft
   url: http://scphilly.org
   date: 2014-07-01
-  image_url: https://justincampbell.s3.amazonaws.com/scphilly.png
+  image: /images/scphilly.png
   tags: [community, learning]
 - name: Turing-Incomplete
   url: http://turing.cool
   date: 2014-06-11
-  image_url: https://justincampbell.s3.amazonaws.com/turing-incomplete.png
+  image: /images/turing-incomplete.png
   tags: [community, podcast]
 - name: tp
   url: https://github.com/JustinCampbell/tp
   date: 2014-05-22
-  image_url: https://justincampbell.s3.amazonaws.com/tp.png
+  image: /images/tp.png
   tags: [cli, open-source, ruby]
 - name: tmux-status-bar
   url: https://github.com/justincampbell/tmux-status-bar
   date: 2014-05-15
-  image_url: https://s3.amazonaws.com/justincampbell/tmux-status-bar.png
+  image: /images/tmux-status-bar.png
   tags: [bash, cli, open-source]
 - name: dotmusic
   url: https://github.com/justincampbell/dotmusic
@@ -157,7 +157,7 @@
 - name: Whipped Cream
   url: https://github.com/justincampbell/whipped-cream
   date: 2013-10-09
-  image_url: https://s3.amazonaws.com/justincampbell/whipped-cream.png
+  image: /images/whipped-cream.png
   tags: [open-source, ruby]
 - name: URL Shorteners
   url: https://github.com/justincampbell/url-shorteners
@@ -170,7 +170,7 @@
 - name: Berkshelf
   url: https://berkshelf.com
   date: 2013-03-25
-  image_url: https://justincampbell.s3.amazonaws.com/berkshelf.png
+  image: /images/berkshelf.png
   tags: [devops, open-source, ruby, work]
 - name: Guard::Cane
   url: https://github.com/guard/guard-cane
@@ -179,20 +179,20 @@
 - name: speclj-tmux
   url: https://github.com/justincampbell/speclj-tmux
   date: 2013-01-03
-  image_url: https://justincampbell.s3.amazonaws.com/speclj-tmux.png
+  image: /images/speclj-tmux.png
   tags: [open-source, clojure]
 - name: '#RubyFriends'
   url: http://rubyfriends.com
   date: 2012-11-01
-  image_url: https://s3.amazonaws.com/justincampbell/rubyfriends.png
+  image: /images/rubyfriends.png
   tags: [community, ruby]
 - name: Dividata for iOS
   url: https://bit.ly/dividata-ios
   date: 2012-06-15
-  image_url: https://justincampbell.s3.amazonaws.com/dividata-ios.png
+  image: /images/dividata-ios.png
   tags: [ios, ruby, web]
 - name: Dividata
   url: https://dividata.com
   date: 2012-03-25
-  image_url: https://justincampbell.s3.amazonaws.com/dividata.png
+  image: /images/dividata.png
   tags: [rails, ruby, web]
