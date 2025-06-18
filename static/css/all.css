@@ -158,6 +158,10 @@ ul#tags span.count::after {
   content: ")";
 }
 
+.page {
+    margin: 2em 2em 5em;
+}
+
 #projects {
   margin: auto;
   padding: 0;

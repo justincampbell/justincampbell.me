@@ -1,0 +1,7 @@
+{{ $file := .Get "file" }}
+{{ $content := readFile $file }}
+{{ if .Get "markdown" }}
+{{ $content | markdownify }}
+{{ else }}
+{{ $content }}
+{{ end }}
