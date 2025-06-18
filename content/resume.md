@@ -1,6 +1,6 @@
 ---
 title: "Resume"
-type: "resume"
+type: "page"
 ---
 
 {{< readfile file="resume/JustinCampbell.md" markdown="true" >}}
