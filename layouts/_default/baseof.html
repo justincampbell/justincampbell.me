@@ -2,7 +2,8 @@
 <html>
   <head>
     <title>Justin Campbell</title>
-    <link rel="stylesheet" href="/css/all.css">
+    {{ $css := resources.Get "css/all.css" | fingerprint "md5" }}
+    <link rel="stylesheet" href="{{ $css.RelPermalink }}">
     <meta name="viewport" content="width=device-width">
     <meta name="build-time" content="{{ now.UTC.Format "2006-01-02T15:04:05Z" }}">
   </head>
@@ -10,6 +11,7 @@
     {{ partial "sidebar.html" . }}
     <div id="content">{{ block "main" . }}{{ end }}</div>
     {{ template "_internal/google_analytics.html" . }}
-    <script src="/js/all.js"></script>
+    {{ $js := resources.Get "js/all.js" | fingerprint "md5" }}
+    <script src="{{ $js.RelPermalink }}"></script>
   </body>
 </html>
