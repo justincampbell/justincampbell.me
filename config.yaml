@@ -2,6 +2,8 @@ baseURL: "https://justincampbell.me"
 languageCode: "en-us"
 title: "Justin Campbell"
 
+googleAnalytics: "G-45Z4ZP5XTN"
+
 markup:
   goldmark:
     renderer:
