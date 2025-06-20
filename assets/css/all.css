@@ -160,6 +160,7 @@ ul#tags span.count::after {
 }
 
 .page {
+    font-size: 12pt;
     margin: 2em 2em 5em;
 }
 
