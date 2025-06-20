@@ -2,7 +2,7 @@
 - name: GitHub Copilot
   url: https://github.com/features/copilot
   date: 2023-09-01
-  tags: [ai, go, javascript, rails, react, ruby, web, work]
+  tags: [ai, go, rails, react, ruby, web, work]
 - name: Rose's Little Donuts
   url: https://roseslittledonuts.com
   image: /images/roseslittledonuts.png
@@ -11,11 +11,11 @@
 - name: VTS Marketplace
   url: https://marketplace.vts.com/search/new_york_city
   date: 2021-12-01
-  tags: [javascript, rails, react, ruby, web, work]
+  tags: [rails, react, ruby, web, work]
 - name: Terraform Registry
   url: https://registry.terraform.io
   date: 2018-01-01
-  tags: [devops, ember, go, javascript, web, work]
+  tags: [devops, ember, go, web, work]
 - name: Progress Printer
   url: https://github.com/justincampbell/progress_printer
   date: 2017-10-13
@@ -31,7 +31,7 @@
 - name: Terraform Enterprise
   url: https://app.terraform.io
   date: 2017-03-15
-  tags: [devops, go, ember, javascript, rails, ruby, web, work]
+  tags: [devops, go, ember, rails, ruby, web, work]
 - name: countdown
   url: https://github.com/justincampbell/countdown
   date: 2017-01-10
@@ -106,7 +106,7 @@
 - name: q-queue
   url: https://github.com/justincampbell/q-queue
   date: 2014-08-21
-  tags: [bash, cli, open-source]
+  tags: [cli, open-source]
 - name: "tmux \U0001F345pomodoro"
   url: https://github.com/justincampbell/tmux-pomodoro
   date: 2014-07-23
@@ -130,19 +130,19 @@
   url: https://github.com/justincampbell/tmux-status-bar
   date: 2014-05-15
   image: /images/tmux-status-bar.png
-  tags: [bash, cli, open-source]
+  tags: [cli, open-source]
 - name: dotmusic
   url: https://github.com/justincampbell/dotmusic
   date: 2014-04-23
-  tags: [bash, cli, open-source]
+  tags: [cli, open-source]
 - name: rr repeat/retry
   url: https://github.com/justincampbell/rr
   date: 2014-04-15
-  tags: [bash, cli, open-source]
+  tags: [cli, open-source]
 - name: use
   url: https://github.com/justincampbell/use
   date: 2014-03-22
-  tags: [bash, cli, open-source]
+  tags: [cli, open-source]
 - name: Philly Code and Coffee
   url: https://www.meetup.com/philly-code-and-coffee/
   date: 2014-03-19
@@ -150,11 +150,11 @@
 - name: motherbrain
   url: https://github.com/RiotGames/motherbrain
   date: 2014-02-18
-  tags: [chef, devops, open-source, ruby, work]
+  tags: [devops, open-source, ruby, work]
 - name: chef-drone
   url: https://github.com/justincampbell/chef-drone
   date: 2014-02-14
-  tags: [chef, devops, open-source]
+  tags: [devops, open-source]
 - name: Generative
   url: https://github.com/justincampbell/generative
   date: 2013-11-21
