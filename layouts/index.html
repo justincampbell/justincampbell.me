@@ -3,21 +3,21 @@
   <li id="tag-all" class="tag active">
     <a href="#" onclick="filterProjects()">all</a>
   </li>
-  {{ $tags := dict }}
-  {{ range .Site.Data.projects }}
-    {{ range .tags }}
-      {{ $count := index $tags . | default 0 }}
-      {{ $tags = merge $tags (dict . (add $count 1)) }}
-    {{ end }}
-  {{ end }}
-  {{ range $tag, $count := $tags }}
+  {{- $tags := dict -}}
+  {{- range .Site.Data.projects -}}
+    {{- range .tags -}}
+      {{- $count := index $tags . | default 0 -}}
+      {{- $tags = merge $tags (dict . (add $count 1)) -}}
+    {{- end -}}
+  {{- end -}}
+  {{- range $tag, $count := $tags -}}
     <li class="tag" id="tag-{{ $tag }}">
       <a href="#{{ $tag }}" onclick="filterProjects('{{ $tag }}')">
         {{ $tag }}
         <span class="count">{{ $count }}</span>
       </a>
     </li>
-  {{ end }}
+  {{- end -}}
 </ul>
 
 <ul id="projects">
