@@ -54,7 +54,7 @@ body {
   background-color: var(--background-color);
   color: var(--text-color);
   font: 16pt Quando;
-  overflow-x: clip;
+  overflow-x: hidden;
 }
 
 a {
