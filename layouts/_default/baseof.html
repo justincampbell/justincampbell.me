@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Justin Campbell</title>
+    <title>{{ if .Title }}{{ .Title }} - {{ end }}Justin Campbell</title>
     {{ $css := resources.Get "css/all.css" | fingerprint "md5" }}
     <link rel="stylesheet" href="{{ $css.RelPermalink }}">
     <meta name="viewport" content="width=device-width">
