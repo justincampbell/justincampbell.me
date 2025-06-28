@@ -8,3 +8,8 @@ markup:
   goldmark:
     renderer:
       unsafe: true
+
+taxonomies: {}
+
+disableKinds:
+  - RSS
