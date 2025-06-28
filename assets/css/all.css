@@ -67,15 +67,6 @@ a:hover {
   color: var(--link-hover-color);
 }
 
-a.highlight {
-  background-color: var(--link-hover-color);
-  color: var(--background-color);
-  padding: 0.2em;
-}
-
-a.highlight:hover {
-  background-color: var(--link-color);
-}
 
 #sidebar {
   text-align: center;
@@ -93,9 +84,7 @@ a.highlight:hover {
 }
 
 #navigation {
-  display: block;
   font-size: 0.75em;
-  list-style-type: none;
   padding: 0;
 }
 
@@ -105,29 +94,17 @@ a.highlight:hover {
 }
 
 #navigation a {
-  transition: all 0.25s ease;
   border-radius: 0.2em;
-  color: var(--link-color);
   padding: 0.2em;
-  text-decoration: none;
 }
 
 #navigation a:hover {
   background: linear-gradient(to right,red,orange,yellow,green,blue,indigo,violet,red);
   animation: slide-right 1s linear infinite;
   background-size: var(--rainbow-width);
-  color: var(--white) !important;
+  color: white;
 }
 
-#navigation a.highlight {
-  background-color: var(--link-hover-color);
-  color: var(--white);
-  padding: 0.2em;
-}
-
-#navigation a.highlight:hover {
-  background-color: var(--link-color);
-}
 
 ul#tags {
   margin: 2em 2em 0 2em;
@@ -190,18 +167,6 @@ ul#tags span.count {
   width: 100%;
 }
 
-ul.nav {
-  display: inline-block;
-  padding: 0;
-}
-
-ul.nav li {
-  border: 1pt solid var(--border-color);
-  border-radius: 0.2em;
-  display: inline;
-  padding: 0.25em;
-  margin: 0.5em;
-}
 
 .error {
   color: var(--orange);
