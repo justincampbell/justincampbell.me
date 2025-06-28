@@ -105,6 +105,12 @@ a:hover {
   color: white;
 }
 
+#navigation hr {
+  background-color: var(--border-color);
+  border: 0;
+  height: 1px;
+  margin: 1em;
+}
 
 ul#tags {
   margin: 2em 2em 0 2em;
