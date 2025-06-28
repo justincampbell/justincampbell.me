@@ -18,11 +18,16 @@
 
 :root {
   --orange: #ff8000;
+  --golden-ratio: 1.618;
+
+  --text-size: 16pt;
+  --text-size-small: calc(var(--text-size) / var(--golden-ratio));
 
   --accent-color: var(--orange);
   --link-hover-color: var(--orange);
   --muted-color: #999;
   --rainbow-width: 250px;
+  --transition-duration: 0.25s;
 
   --background-color: white;
   --border-color: #333;
@@ -53,7 +58,7 @@
 body {
   background-color: var(--background-color);
   color: var(--text-color);
-  font: 16pt Quando;
+  font: var(--text-size) 'Quando', serif;
   overflow-x: hidden;
 }
 
@@ -132,7 +137,7 @@ a.highlight:hover {
 ul#tags {
   margin: 2em 2em 0 2em;
   padding: 0;
-  font-size: 0.618em;
+  font-size: var(--text-size-small);
   list-style-type: none;
   text-align: center;
 }
@@ -188,6 +193,21 @@ ul#tags span.count {
   padding: 0.5em;
   vertical-align: middle;
   width: 100%;
+}
+
+.project-tags {
+  display: flex;
+  font-size: var(--text-size-small);
+  justify-content: center;
+  padding: 0.5em;
+  transition: opacity var(--transition-duration) ease;
+  opacity: 0;
+  white-space: nowrap;
+}
+
+.project:hover .project-tags {
+  opacity: 1;
+  visibility: visible;
 }
 
 ul.nav {

@@ -30,6 +30,10 @@
           <span class="name">{{ .name | safeHTML }}</span>
         {{ end }}
       </a>
+
+      <div class="project-tags">
+        {{ delimit .tags ", " | safeHTML }}
+      </div>
     </li>
   {{ end }}
 </ul>
