@@ -203,19 +203,13 @@ ul.nav li {
   margin: 0.5em;
 }
 
-body.error {
+.error {
+  color: var(--orange);
   text-align: center;
 }
 
-body.error h1 {
-  color: var(--accent-color);
-  font: 72pt Pacifico;
-}
-
-body.error #error {
-  background: var(--accent-color);
-  color: var(--background-color);
-  padding: 1em;
+.error h2 {
+  font-size: 3em;
 }
 
 @media all and (min-width: 481px) {
@@ -234,6 +228,7 @@ body.error #error {
   #content {
     float: left;
     padding-right: 100px;
+    width: calc(100% - 100px);
   }
 
   ul#tags {
