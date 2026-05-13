@@ -1,4 +1,36 @@
 ---
+- name: rmt8l
+  url: https://github.com/justincampbell/rmt8l
+  date: 2026-05-13
+  tags: [cli, electronics, fpv, go, open-source]
+- name: tmux-git-menu
+  url: https://github.com/justincampbell/tmux-git-menu
+  date: 2026-05-11
+  tags: [cli, open-source]
+- name: shortcut-statusline
+  url: https://github.com/justincampbell/shortcut-statusline
+  date: 2026-05-11
+  tags: [cli, go, open-source]
+- name: gh-statusline
+  url: https://github.com/justincampbell/gh-statusline
+  date: 2026-05-11
+  tags: [cli, go, open-source]
+- name: bfctl
+  url: https://github.com/justincampbell/bfctl
+  date: 2026-05-06
+  tags: [cli, electronics, fpv, go, open-source]
+- name: gh-watch
+  url: https://github.com/justincampbell/gh-watch
+  date: 2026-04-13
+  tags: [cli, go, open-source]
+- name: revise
+  url: https://github.com/justincampbell/revise
+  date: 2026-03-07
+  tags: [ai, cli, go, open-source]
+- name: eighties.nvim
+  url: https://github.com/justincampbell/eighties.nvim
+  date: 2025-09-24
+  tags: [open-source, vim]
 - name: GitHub Copilot
   url: https://github.com/features/copilot
   date: 2023-09-01
