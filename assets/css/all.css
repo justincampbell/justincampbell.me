@@ -20,13 +20,13 @@
   --orange: #ff8000;
 
   --accent-color: var(--orange);
-  --link-hover-color: var(--orange);
-  --muted-color: #999;
-  --rainbow-width: 250px;
-
   --background-color: white;
   --border-color: #333;
   --link-color: #333;
+  --link-active-color: var(--muted-color);
+  --link-hover-color: var(--orange);
+  --muted-color: #999;
+  --rainbow-width: 250px;
   --surface-color: white;
   --text-color: #333;
 }
@@ -96,6 +96,11 @@ a:hover {
 #navigation a {
   border-radius: 0.2em;
   padding: 0.2em;
+  white-space: nowrap;
+}
+
+#navigation a.active {
+  color: var(--link-active-color);
 }
 
 #navigation a:hover {

@@ -1,0 +1,5 @@
+{{- $href := .href -}}
+{{- $text := .text -}}
+{{- $currentURL := .Page.Permalink | relLangURL -}}
+{{- $isActive := eq $currentURL $href -}}
+<a href="{{ $href }}"{{ if $isActive }} class="active"{{ end }}>{{ $text }}</a>
