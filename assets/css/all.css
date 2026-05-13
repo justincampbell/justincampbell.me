@@ -178,6 +178,13 @@ ul#tags span.count {
   width: 100%;
 }
 
+.project .description {
+  color: var(--muted-color);
+  display: block;
+  font-size: 0.618em;
+  margin-top: 0.25em;
+}
+
 
 .error {
   color: var(--orange);

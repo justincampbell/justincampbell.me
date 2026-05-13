@@ -27,7 +27,10 @@
         {{ if .image }}
           <img src="{{ .image }}" title="{{ .name }}" alt="{{ .name }}">
         {{ else }}
-          <span class="name">{{ .name | safeHTML }}</span>
+          <span class="name">
+            {{ .name | safeHTML }}
+            {{ with .description }}<small class="description">{{ . | safeHTML }}</small>{{ end }}
+          </span>
         {{ end }}
       </a>
     </li>

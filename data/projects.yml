@@ -1,5 +1,6 @@
 ---
 - name: rmt8l
+  description: RadioMaster T8L CLI
   url: https://github.com/justincampbell/rmt8l
   date: 2026-05-13
   tags: [cli, electronics, fpv, go, open-source]
@@ -16,6 +17,7 @@
   date: 2026-05-11
   tags: [cli, go, open-source]
 - name: bfctl
+  description: Betaflight CLI
   url: https://github.com/justincampbell/bfctl
   date: 2026-05-06
   tags: [cli, electronics, fpv, go, open-source]
@@ -24,6 +26,7 @@
   date: 2026-04-13
   tags: [cli, go, open-source]
 - name: revise
+  description: Code Review TUI for Agents
   url: https://github.com/justincampbell/revise
   date: 2026-03-07
   tags: [ai, cli, go, open-source]
@@ -56,7 +59,8 @@
   url: https://app.vagrantup.com
   date: 2017-06-27
   tags: [rails, ruby, web, work]
-- name: GoDuration<br><small>for Ruby</small>
+- name: GoDuration
+  description: for Ruby
   url: https://github.com/justincampbell/go_duration_ruby
   date: 2017-05-19
   tags: [open-source, ruby]
@@ -76,11 +80,13 @@
   url: https://github.com/justincampbell/lastpost
   date: 2016-04-29
   tags: [cli, go, open-source]
-- name: Open Pomodoro<br>Specification
+- name: Open Pomodoro
+  description: Specification
   url: https://github.com/open-pomodoro
   date: 2016-04-27
   tags: [open-source]
-- name: staticsite<br><small>Terraform Module</small>
+- name: staticsite
+  description: Terraform Module
   url: https://github.com/justincampbell/terraform-s3-website
   date: 2016-04-05
   tags: [devops, open-source]
