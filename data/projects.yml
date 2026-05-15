@@ -4,6 +4,10 @@
   url: https://github.com/justincampbell/rmt8l
   date: 2026-05-13
   tags: [cli, electronics, fpv, go, open-source]
+- name: tmux-make-menu
+  url: https://github.com/justincampbell/tmux-make-menu
+  date: 2026-05-11
+  tags: [cli, open-source]
 - name: tmux-git-menu
   url: https://github.com/justincampbell/tmux-git-menu
   date: 2026-05-11
